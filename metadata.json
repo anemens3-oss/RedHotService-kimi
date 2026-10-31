@@ -1,0 +1,6 @@
+{
+  "name": "Red Hot Service — Премиальный автосервис внедорожников",
+  "description": "Интерактивный веб-сайт техцентра Red Hot Service (Лыткарино, Тураево 7А): ремонт, обслуживание и подготовка внедорожников и кроссоверов Haval, Great Wall, Tank, Geely, Chery.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

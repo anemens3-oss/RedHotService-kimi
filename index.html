@@ -1,0 +1,918 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Red Hot Service — ремонт и обслуживание внедорожников и кроссоверов в Лыткарино</title>
+  <meta name="description" content="Автомастерская Red Hot Service: ремонт, обслуживание и подготовка внедорожников и кроссоверов. Специализация — Haval, Great Wall, Tank, Geely, Chery. Гарантия до 12 месяцев, свой эвакуатор. Лыткарино, промзона Тураево, 7А. Телефон: +7 (916) 080-80-82.">
+  <meta property="og:title" content="Red Hot Service — ремонт и обслуживание внедорожников и кроссоверов в Лыткарино">
+  <meta property="og:description" content="Автомастерская Red Hot Service: ремонт, обслуживание и подготовка внедорожников и кроссоверов. Специализация — Haval, Great Wall, Tank, Geely, Chery. Гарантия до 12 месяцев, свой эвакуатор.">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" type="image/png" href="assets/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Russo+One&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ===== TOP SCROLL PROGRESS BAR ===== -->
+  <div class="scroll-progress" aria-hidden="true">
+    <div class="scroll-progress__bar" id="scrollProgressBar"></div>
+  </div>
+
+  <!-- ===== CUSTOM CURSOR (DESKTOP ONLY) ===== -->
+  <div class="custom-cursor" id="customCursor" aria-hidden="true">
+    <div class="custom-cursor__ring" id="customCursorRing">
+      <span class="custom-cursor__label" id="customCursorLabel"></span>
+    </div>
+    <div class="custom-cursor__dot" id="customCursorDot"></div>
+  </div>
+
+  <!-- ===== HEADER ===== -->
+  <header class="header" id="header">
+    <div class="header__inner container">
+      <a href="#top" class="header__logo" data-magnetic="0.18" aria-label="Red Hot Service — на главную">
+        <img src="assets/logo.png" alt="Логотип Red Hot Service" width="44" height="44">
+        <span class="header__logo-text">RED HOT <em>SERVICE</em></span>
+      </a>
+      <nav class="header__nav" id="nav" aria-label="Основная навигация">
+        <a href="#about" class="header__link">О нас</a>
+        <a href="#services" class="header__link">Услуги</a>
+        <a href="#cars" class="header__link">Автомобили</a>
+        <a href="#process" class="header__link">Как мы работаем</a>
+        <a href="#gallery" class="header__link">Мастерская</a>
+        <a href="#reviews" class="header__link">Отзывы</a>
+        <a href="#contacts" class="header__link">Контакты</a>
+        <span class="header__nav-indicator" id="navIndicator" aria-hidden="true"></span>
+      </nav>
+      <div class="header__contacts">
+        <a href="tel:+79160808082" class="header__phone" data-magnetic="0.22" data-cursor-text="ЗВОНОК">
+          <span class="header__phone-pulse" aria-hidden="true"></span>
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          +7 (916) 080-80-82
+        </a>
+        <button class="header__burger" id="burger" aria-label="Открыть меню" aria-expanded="false" aria-controls="mobileMenu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===== MOBILE MENU ===== -->
+  <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+    <nav class="mobile-menu__nav" aria-label="Мобильная навигация">
+      <a href="#about" class="mobile-menu__link">О нас</a>
+      <a href="#services" class="mobile-menu__link">Услуги</a>
+      <a href="#cars" class="mobile-menu__link">Автомобили</a>
+      <a href="#process" class="mobile-menu__link">Как мы работаем</a>
+      <a href="#gallery" class="mobile-menu__link">Фото</a>
+      <a href="#reviews" class="mobile-menu__link">Отзывы</a>
+      <a href="#faq" class="mobile-menu__link">Вопросы</a>
+      <a href="#contacts" class="mobile-menu__link">Контакты</a>
+    </nav>
+    <div class="mobile-menu__footer">
+      <a href="tel:+79160808082" class="btn btn--primary btn--block">Позвонить сейчас</a>
+      <a href="tel:+79258940754" class="mobile-menu__tow">Эвакуатор: +7 (925) 894-07-54</a>
+    </div>
+  </div>
+
+  <main id="top">
+
+    <!-- ===== HERO ===== -->
+    <section class="hero" id="hero">
+      <div class="hero__bg" id="heroBg" data-parallax-layer="0.025">
+        <img src="assets/hero-workshop.jpg" alt="Ремонтная зона Red Hot Service — внедорожники на подъёмниках" fetchpriority="high">
+      </div>
+      <div class="hero__overlay" aria-hidden="true"></div>
+      <div class="hero__grid-lines" data-parallax-layer="0.04" aria-hidden="true"></div>
+
+      <!-- Animated Racing Track & Telemetry Vector Overlay -->
+      <svg class="hero__track-svg" viewBox="0 0 1440 900" fill="none" preserveAspectRatio="xMidYMid slice" aria-hidden="true" data-parallax-layer="0.055">
+        <path class="hero__track-base" d="M-80 760 C 240 740, 420 580, 680 540 C 960 500, 1080 240, 1520 180" stroke="rgba(245,245,245,0.06)" stroke-width="2" stroke-dasharray="6 10"/>
+        <path class="hero__track-glow" d="M-80 760 C 240 740, 420 580, 680 540 C 960 500, 1080 240, 1520 180" stroke="#E10600" stroke-width="2.5" stroke-linecap="round"/>
+        <path class="hero__track-secondary" d="M180 920 C 420 790, 610 680, 920 620 C 1180 570, 1340 410, 1540 330" stroke="rgba(225,6,0,0.22)" stroke-width="1"/>
+        <circle class="hero__track-node" cx="680" cy="540" r="5" fill="#E10600"/>
+        <circle class="hero__track-node-ring" cx="680" cy="540" r="14" stroke="rgba(225,6,0,0.5)" stroke-width="1"/>
+        <circle class="hero__track-node" cx="1080" cy="315" r="4" fill="#E10600"/>
+      </svg>
+
+      <div class="hero__layout container">
+        <div class="hero__content">
+          <p class="hero__label" data-hero="1">
+            <span class="hero__label-line"></span>
+            <span>Автомастерская · Лыткарино · Тураево, 7А</span>
+          </p>
+          <h1 class="hero__title" aria-label="RED HOT SERVICE">
+            <span class="hero__title-row" data-hero="2">
+              <span class="hero__title-word">RED</span>
+              <span class="hero__title-word">HOT</span>
+            </span>
+            <span class="hero__title-row hero__title-row--accent" data-hero="3">
+              <span class="hero__title-word">SERVICE</span>
+            </span>
+          </h1>
+          <p class="hero__subtitle" data-hero="4">Ремонт, обслуживание и подготовка внедорожников и&nbsp;кроссоверов. Надёжный автомобиль без сюрпризов — на&nbsp;дороге и&nbsp;бездорожье.</p>
+          <div class="hero__actions" data-hero="5">
+            <a href="tel:+79160808082" class="btn btn--primary" data-magnetic="0.28" data-cursor-text="ЗВОНОК">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              Позвонить сейчас
+            </a>
+            <a href="tel:+79258940754" class="btn btn--ghost" data-magnetic="0.24" data-cursor-text="24/7">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+              Вызвать эвакуатор
+            </a>
+          </div>
+          <ul class="hero__badges" data-hero="6">
+            <li>Гарантия до 12 месяцев</li>
+            <li>Приём 24 часа в сутки</li>
+            <li>Оплата при приёмке</li>
+          </ul>
+        </div>
+
+        <!-- Interactive Automotive Telemetry & Tachometer HUD -->
+        <aside class="hero__hud" data-hero="5" data-parallax-layer="-0.03" aria-label="Панель контроля качества Red Hot Service">
+          <div class="hero__hud-card" data-tilt="4">
+            <div class="hero__hud-top">
+              <span class="hero__hud-tag">ТЕХЦЕНТР ПОЛНОГО ЦИКЛА</span>
+              <span class="hero__hud-coord">55.5661° N · 37.9385° E</span>
+            </div>
+
+            <div class="hero__gauge-wrap">
+              <svg class="hero__gauge" viewBox="0 0 260 165" fill="none" aria-hidden="true">
+                <!-- Outer tick arc -->
+                <path d="M 28 145 A 104 104 0 1 1 232 145" stroke="rgba(245,245,245,0.12)" stroke-width="10" stroke-linecap="round"/>
+                <!-- Animated active red arc -->
+                <path class="hero__gauge-arc" id="heroGaugeArc" d="M 28 145 A 104 104 0 1 1 232 145" stroke="url(#heroRedGrad)" stroke-width="10" stroke-linecap="round" stroke-dasharray="360" stroke-dashoffset="72"/>
+                <!-- Inner precision scale -->
+                <path d="M 46 142 A 86 86 0 1 1 214 142" stroke="rgba(245,245,245,0.18)" stroke-width="2" stroke-dasharray="3 9"/>
+                <!-- Gauge needle -->
+                <g class="hero__gauge-needle" id="heroGaugeNeedle" style="transform-origin: 130px 140px;">
+                  <line x1="130" y1="140" x2="196" y2="66" stroke="#E10600" stroke-width="3" stroke-linecap="round"/>
+                  <circle cx="130" cy="140" r="7" fill="#E10600"/>
+                  <circle cx="130" cy="140" r="3" fill="#F5F5F5"/>
+                </g>
+                <defs>
+                  <linearGradient id="heroRedGrad" x1="28" y1="145" x2="232" y2="50" gradientUnits="userSpaceOnUse">
+                    <stop offset="0%" stop-color="#F5F5F5" stop-opacity="0.35"/>
+                    <stop offset="55%" stop-color="#E10600"/>
+                    <stop offset="100%" stop-color="#FF2A24"/>
+                  </linearGradient>
+                </defs>
+              </svg>
+              <div class="hero__gauge-readout">
+                <span class="hero__gauge-val" id="heroHudMainVal">96,3%</span>
+                <span class="hero__gauge-lbl" id="heroHudMainLbl">Автомобилей без возврата по гарантии</span>
+              </div>
+            </div>
+
+            <div class="hero__hud-modes" role="tablist" aria-label="Направления работы техцентра">
+              <button type="button" class="hero__hud-mode is-active" role="tab" aria-selected="true" data-hud-val="96,3%" data-hud-lbl="Автомобилей без возврата по гарантии" data-hud-angle="18" data-hud-offset="42">
+                <span>4X4 СЕРВИС</span>
+              </button>
+              <button type="button" class="hero__hud-mode" role="tab" aria-selected="false" data-hud-val="ADACT" data-hud-lbl="Сертифицированная диагностика и чип-тюнинг" data-hud-angle="32" data-hud-offset="24">
+                <span>ДИАГНОСТИКА</span>
+              </button>
+              <button type="button" class="hero__hud-mode" role="tab" aria-selected="false" data-hud-val="12 МЕС" data-hud-lbl="Официальная гарантия на работы и узлы" data-hud-angle="8" data-hud-offset="64">
+                <span>OFF-ROAD</span>
+              </button>
+            </div>
+
+            <div class="hero__hud-metrics">
+              <a href="#services" class="hero__hud-metric">
+                <span class="hero__hud-metric-k">Смета до работ</span>
+                <strong class="hero__hud-metric-v">Точность ±5%</strong>
+              </a>
+              <a href="#contacts" class="hero__hud-metric">
+                <span class="hero__hud-metric-k">Ремзона</span>
+                <strong class="hero__hud-metric-v">Свободный вход</strong>
+              </a>
+            </div>
+          </div>
+        </aside>
+      </div>
+
+      <div class="hero__speed" aria-hidden="true">
+        <span></span><span></span><span></span><span></span><span></span>
+      </div>
+
+      <a href="#about" class="hero__scroll" aria-label="Прокрутить вниз">
+        <span class="hero__scroll-text">Листайте вниз</span>
+        <span class="hero__scroll-line"></span>
+      </a>
+    </section>
+
+    <!-- ===== MARQUEE ===== -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee__track">
+        <span>HAVAL</span><span>GREAT WALL</span><span>TANK</span><span>GEELY</span><span>CHERY</span><span>JAC</span><span>MITSUBISHI</span><span>TOYOTA</span><span>KIA</span><span>HYUNDAI</span>
+        <span>HAVAL</span><span>GREAT WALL</span><span>TANK</span><span>GEELY</span><span>CHERY</span><span>JAC</span><span>MITSUBISHI</span><span>TOYOTA</span><span>KIA</span><span>HYUNDAI</span>
+      </div>
+    </div>
+
+    <!-- ===== ABOUT ===== -->
+    <section class="section about" id="about">
+      <div class="container">
+        <header class="section__head" data-reveal>
+          <span class="section__num">01</span>
+          <div>
+            <p class="section__label">О компании</p>
+            <h2 class="section__title" data-split-title>Сервис, который знает<br>ваш автомобиль <em>наизусть</em></h2>
+          </div>
+        </header>
+
+        <div class="about__grid">
+          <div class="about__text" data-reveal>
+            <p class="about__lead">Red Hot Service — техцентр полного цикла для внедорожников и&nbsp;кроссоверов. Больше семи лет мы работаем с&nbsp;азиатскими автомобилями и&nbsp;знаем их&nbsp;слабые места лучше дилеров.</p>
+            <p>К нам приезжают со всей Москвы и области — от планового ТО до капитального ремонта двигателя, переборки раздатки и полной подготовки машины к экспедиции. Один из лучших диагностов Москвы, проверенные запчасти и честная смета до начала работ.</p>
+            <div class="about__stats">
+              <div class="stat" data-reveal data-tilt="5">
+                <span class="stat__value"><span data-counter="7238">0</span></span>
+                <span class="stat__label">довольных клиентов</span>
+                <span class="stat__bar" aria-hidden="true"><span class="stat__bar-fill" style="--stat-w: 94%"></span></span>
+              </div>
+              <div class="stat" data-reveal data-tilt="5">
+                <span class="stat__value"><span data-counter="96.3" data-decimals="1">0</span>%</span>
+                <span class="stat__label">без возврата по гарантии</span>
+                <span class="stat__bar" aria-hidden="true"><span class="stat__bar-fill" style="--stat-w: 96.3%"></span></span>
+              </div>
+              <div class="stat" data-reveal data-tilt="5">
+                <span class="stat__value"><span data-counter="12">0</span> мес</span>
+                <span class="stat__label">гарантия на работы</span>
+                <span class="stat__bar" aria-hidden="true"><span class="stat__bar-fill" style="--stat-w: 100%"></span></span>
+              </div>
+              <div class="stat" data-reveal data-tilt="5">
+                <span class="stat__value"><span data-counter="10">0</span>+ лет</span>
+                <span class="stat__label">опыт каждого мастера</span>
+                <span class="stat__bar" aria-hidden="true"><span class="stat__bar-fill" style="--stat-w: 90%"></span></span>
+              </div>
+            </div>
+          </div>
+          <div class="about__media" data-reveal="right">
+            <figure class="about__photo about__photo--main" data-curtain>
+              <img src="assets/workshop-lift.jpg" alt="Механик Red Hot Service ремонтирует автомобиль на подъёмнике" loading="lazy">
+            </figure>
+            <figure class="about__photo about__photo--small" data-curtain data-scroll-parallax="-24">
+              <img src="assets/workshop-parts.jpg" alt="Переборка редуктора и агрегатов внедорожника" loading="lazy">
+            </figure>
+            <span class="about__media-tag" aria-hidden="true">Ремзона · Тураево</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SERVICES + INTERACTIVE 4X4 TECHNICAL BLUEPRINT ===== -->
+    <section class="section services" id="services">
+      <div class="container">
+        <header class="section__head" data-reveal>
+          <span class="section__num">02</span>
+          <div>
+            <p class="section__label">Основные услуги</p>
+            <h2 class="section__title" data-split-title>Полный цикл —<br>от диагностики до <em>бездорожья</em></h2>
+          </div>
+        </header>
+
+        <!-- Interactive Automotive 4x4 Technical Blueprint -->
+        <div class="blueprint" data-reveal aria-label="Интерактивная техническая схема обслуживания внедорожника">
+          <div class="blueprint__header">
+            <div>
+              <p class="blueprint__eyebrow">Интерактивная карта агрегатов</p>
+              <h3 class="blueprint__title">Выберите узел автомобиля для просмотра работ</h3>
+            </div>
+            <div class="blueprint__tabs" role="tablist" aria-label="Выбор технического узла">
+              <button type="button" class="blueprint__tab is-active" data-node-btn="0" role="tab" aria-selected="true">S.01 Двигатель</button>
+              <button type="button" class="blueprint__tab" data-node-btn="1" role="tab" aria-selected="false">S.02 Трансмиссия</button>
+              <button type="button" class="blueprint__tab" data-node-btn="2" role="tab" aria-selected="false">S.03 Диагностика</button>
+              <button type="button" class="blueprint__tab" data-node-btn="3" role="tab" aria-selected="false">S.04 Электрика</button>
+              <button type="button" class="blueprint__tab" data-node-btn="4" role="tab" aria-selected="false">S.05 Бездорожье</button>
+              <button type="button" class="blueprint__tab" data-node-btn="5" role="tab" aria-selected="false">S.06 Кузов и рама</button>
+            </div>
+          </div>
+
+          <div class="blueprint__body">
+            <!-- SVG SUV Technical Schematic with Interactive Red Nodes -->
+            <div class="blueprint__stage">
+              <div class="blueprint__grid-bg" aria-hidden="true"></div>
+              <div class="blueprint__scanline" aria-hidden="true"></div>
+
+              <svg class="blueprint__svg" viewBox="0 0 800 380" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Техническая схема внедорожника Red Hot Service">
+                <!-- Ground & clearance reference line -->
+                <line x1="40" y1="322" x2="760" y2="322" stroke="rgba(245,245,245,0.16)" stroke-width="1" stroke-dasharray="8 6"/>
+                <line x1="85" y1="276" x2="715" y2="276" stroke="rgba(225,6,0,0.28)" stroke-width="1" stroke-dasharray="4 4"/>
+                <text x="50" y="342" fill="rgba(160,160,160,0.65)" font-family="Manrope, sans-serif" font-size="10" letter-spacing="2">ШАССИ И АГРЕГАТЫ ВНЕДОРОЖНИКА · RED HOT SERVICE</text>
+
+                <!-- SUV Body Silhouette (Technical CAD Wireframe) -->
+                <g class="blueprint__layer-body">
+                  <!-- Outer SUV body profile -->
+                  <path d="M 92 228 L 106 176 L 238 158 L 312 88 L 656 88 L 698 164 L 708 242 L 664 252 C 654 202, 566 202, 556 252 L 268 252 C 258 202, 170 202, 160 252 L 104 248 Z"
+                        stroke="rgba(245,245,245,0.42)" stroke-width="2" fill="rgba(245,245,245,0.02)"/>
+                  <!-- Windows & pillars -->
+                  <path d="M 322 98 L 254 158 L 392 158 L 392 98 Z" stroke="rgba(245,245,245,0.24)" stroke-width="1.5" fill="rgba(245,245,245,0.03)"/>
+                  <path d="M 404 98 L 404 158 L 534 158 L 534 98 Z" stroke="rgba(245,245,245,0.24)" stroke-width="1.5" fill="rgba(245,245,245,0.03)"/>
+                  <path d="M 546 98 L 546 158 L 678 158 L 646 98 Z" stroke="rgba(245,245,245,0.24)" stroke-width="1.5" fill="rgba(245,245,245,0.03)"/>
+                  <!-- Roof expedition rack -->
+                  <path d="M 330 80 L 642 80 M 360 80 L 360 88 M 450 80 L 450 88 M 540 80 L 540 88 M 620 80 L 620 88" stroke="rgba(225,6,0,0.55)" stroke-width="2"/>
+                  <!-- Front Steel Bumper & Winch mount -->
+                  <path d="M 74 214 L 104 214 L 108 252 L 82 252 Z" stroke="#E10600" stroke-width="2" fill="rgba(225,6,0,0.14)"/>
+                </g>
+
+                <!-- Internal Ladder Frame & Drivetrain (X-Ray Layer) -->
+                <g class="blueprint__layer-drivetrain">
+                  <!-- Heavy-duty Ladder Frame Rails -->
+                  <path d="M 96 244 L 696 244 L 690 256 L 102 256 Z" stroke="rgba(245,245,245,0.35)" stroke-width="1.5" fill="rgba(225,6,0,0.07)"/>
+                  <!-- Engine Block (Front) -->
+                  <rect x="168" y="176" width="68" height="54" rx="4" stroke="#E10600" stroke-width="2" fill="rgba(225,6,0,0.16)"/>
+                  <line x1="178" y1="188" x2="226" y2="188" stroke="#F5F5F5" stroke-width="1.5"/>
+                  <line x1="178" y1="200" x2="226" y2="200" stroke="#F5F5F5" stroke-width="1.5"/>
+                  <line x1="178" y1="212" x2="226" y2="212" stroke="#F5F5F5" stroke-width="1.5"/>
+                  <!-- Gearbox, Transfer Case & Haldex / Driveshafts -->
+                  <path d="M 236 208 L 418 236 L 606 264" stroke="#E10600" stroke-width="3" stroke-linecap="round"/>
+                  <rect x="372" y="218" width="62" height="32" rx="4" stroke="#E10600" stroke-width="2" fill="rgba(225,6,0,0.18)"/>
+                  <!-- ECU & Wiring Bus -->
+                  <path d="M 218 176 C 245 148, 285 148, 305 166 L 475 166" stroke="rgba(225,6,0,0.65)" stroke-width="1.5" stroke-dasharray="5 3"/>
+                  <rect x="282" y="152" width="34" height="22" rx="2" stroke="#F5F5F5" stroke-width="1.5" fill="rgba(8,8,8,0.9)"/>
+                  <!-- Suspension Coilovers (Front & Rear Lift) -->
+                  <path d="M 214 202 L 214 264 M 206 212 L 222 218 L 206 224 L 222 230 L 206 236" stroke="#E10600" stroke-width="2"/>
+                  <path d="M 610 202 L 610 264 M 602 212 L 618 218 L 602 224 L 618 230 L 602 236" stroke="#E10600" stroke-width="2"/>
+                </g>
+
+                <!-- Off-Road Wheels & Tires -->
+                <g class="blueprint__layer-wheels">
+                  <!-- Front Wheel -->
+                  <circle cx="214" cy="266" r="52" stroke="rgba(245,245,245,0.65)" stroke-width="3" fill="rgba(8,8,8,0.85)"/>
+                  <circle cx="214" cy="266" r="38" stroke="rgba(245,245,245,0.25)" stroke-width="2" stroke-dasharray="6 4"/>
+                  <circle cx="214" cy="266" r="18" stroke="#E10600" stroke-width="2" fill="rgba(225,6,0,0.12)"/>
+                  <!-- Rear Wheel -->
+                  <circle cx="610" cy="266" r="52" stroke="rgba(245,245,245,0.65)" stroke-width="3" fill="rgba(8,8,8,0.85)"/>
+                  <circle cx="610" cy="266" r="38" stroke="rgba(245,245,245,0.25)" stroke-width="2" stroke-dasharray="6 4"/>
+                  <circle cx="610" cy="266" r="18" stroke="#E10600" stroke-width="2" fill="rgba(225,6,0,0.12)"/>
+                </g>
+              </svg>
+
+              <!-- Interactive HTML Hotspot Markers overlaid at exact SVG percentage coordinates -->
+              <button type="button" class="blueprint__hotspot is-active" style="left: 25.2%; top: 52%;" data-node-hotspot="0" aria-label="Узел S.01: Двигатель">
+                <span class="blueprint__hotspot-code">S.01</span>
+                <span class="blueprint__hotspot-pulse"></span>
+              </button>
+              <button type="button" class="blueprint__hotspot" style="left: 50.4%; top: 61%;" data-node-hotspot="1" aria-label="Узел S.02: Трансмиссия и редукторы">
+                <span class="blueprint__hotspot-code">S.02</span>
+                <span class="blueprint__hotspot-pulse"></span>
+              </button>
+              <button type="button" class="blueprint__hotspot" style="left: 37.5%; top: 43%;" data-node-hotspot="2" aria-label="Узел S.03: Диагностика и чип-тюнинг">
+                <span class="blueprint__hotspot-code">S.03</span>
+                <span class="blueprint__hotspot-pulse"></span>
+              </button>
+              <button type="button" class="blueprint__hotspot" style="left: 16.5%; top: 47%;" data-node-hotspot="3" aria-label="Узел S.04: Электрика и свет">
+                <span class="blueprint__hotspot-code">S.04</span>
+                <span class="blueprint__hotspot-pulse"></span>
+              </button>
+              <button type="button" class="blueprint__hotspot" style="left: 11.2%; top: 61%;" data-node-hotspot="4" aria-label="Узел S.05: Подготовка к бездорожью">
+                <span class="blueprint__hotspot-code">S.05</span>
+                <span class="blueprint__hotspot-pulse"></span>
+              </button>
+              <button type="button" class="blueprint__hotspot" style="left: 76.2%; top: 48%;" data-node-hotspot="5" aria-label="Узел S.06: Кузовной цех и рама">
+                <span class="blueprint__hotspot-code">S.06</span>
+                <span class="blueprint__hotspot-pulse"></span>
+              </button>
+            </div>
+
+            <!-- Interactive Node Inspector Panel -->
+            <div class="blueprint__panel" id="blueprintPanel" aria-live="polite">
+              <div class="blueprint__panel-media">
+                <img id="blueprintImg" src="assets/service-engine.jpg" alt="Капитальный ремонт двигателя в Red Hot Service">
+                <span class="blueprint__panel-index" id="blueprintIndex">S.01</span>
+              </div>
+              <div class="blueprint__panel-content">
+                <h4 id="blueprintTitle">Двигатель</h4>
+                <p id="blueprintDesc">Диагностика, ремонт и капиталка бензиновых и дизельных моторов. Замена цепей и ремней ГРМ, турбин, ТНВД и форсунок.</p>
+                <ul class="blueprint__panel-specs" id="blueprintSpecs">
+                  <li>Бензиновые и дизельные ДВС</li>
+                  <li>Замена цепей и ремней ГРМ</li>
+                  <li>Ремонт турбин, ТНВД и форсунок</li>
+                </ul>
+                <div class="blueprint__panel-actions">
+                  <a href="tel:+79160808082" class="btn btn--primary btn--sm" data-magnetic="0.2">Узнать стоимость по телефону</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="services__grid">
+          <article class="service-card is-highlighted" data-reveal data-tilt="5" data-service-index="0">
+            <div class="service-card__media"><img src="assets/service-engine.jpg" alt="Капитальный ремонт двигателя Mitsubishi в Red Hot Service" loading="lazy"></div>
+            <div class="service-card__body">
+              <span class="service-card__index">S.01</span>
+              <h3>Двигатель</h3>
+              <p>Диагностика, ремонт и капиталка бензиновых и дизельных моторов. Замена цепей и ремней ГРМ, турбин, ТНВД и форсунок.</p>
+            </div>
+          </article>
+          <article class="service-card" data-reveal data-tilt="5" data-service-index="1">
+            <div class="service-card__media"><img src="assets/workshop-parts.jpg" alt="Переборка редуктора и механической коробки передач" loading="lazy"></div>
+            <div class="service-card__body">
+              <span class="service-card__index">S.02</span>
+              <h3>Трансмиссия</h3>
+              <p>Переборка МКПП, редукторов и раздаточных коробок. Замена масел в мостах, муфте Haldex и карданных валах.</p>
+            </div>
+          </article>
+          <article class="service-card" data-reveal data-tilt="5" data-service-index="2">
+            <div class="service-card__media"><img src="assets/service-chip.jpg" alt="Компьютерная диагностика и чип-тюнинг внедорожника" loading="lazy"></div>
+            <div class="service-card__body">
+              <span class="service-card__index">S.03</span>
+              <h3>Диагностика и чип-тюнинг</h3>
+              <p>Один из лучших диагностов Москвы, член ассоциации ADACT. Возвращаем к жизни автомобили, от которых отказались другие сервисы.</p>
+            </div>
+          </article>
+          <article class="service-card" data-reveal data-tilt="5" data-service-index="3">
+            <div class="service-card__media"><img src="assets/service-electrics.jpg" alt="Ремонт электрики и электрооборудования автомобиля" loading="lazy"></div>
+            <div class="service-card__body">
+              <span class="service-card__index">S.04</span>
+              <h3>Электрика</h3>
+              <p>Поиск и устранение неисправностей электрооборудования, ремонт проводки, установка сигнализаций и дополнительного света.</p>
+            </div>
+          </article>
+          <article class="service-card" data-reveal data-tilt="5" data-service-index="4">
+            <div class="service-card__media"><img src="assets/service-winch.jpg" alt="Установка лебёдки и силового оборудования на внедорожник" loading="lazy"></div>
+            <div class="service-card__body">
+              <span class="service-card__index">S.05</span>
+              <h3>Подготовка к бездорожью</h3>
+              <p>Лифт подвески, силовые бамперы, лебёдки, самоблокирующиеся дифференциалы, экспедиционное оборудование.</p>
+            </div>
+          </article>
+          <article class="service-card" data-reveal data-tilt="5" data-service-index="5">
+            <div class="service-card__media"><img src="assets/service-body.jpg" alt="Кузовной ремонт и восстановление автомобиля после ДТП" loading="lazy"></div>
+            <div class="service-card__body">
+              <span class="service-card__index">S.06</span>
+              <h3>Кузовной цех</h3>
+              <p>Восстановление после ДТП, ремонт рам, арматурные и жестяные работы, покраска с точным подбором цвета.</p>
+            </div>
+          </article>
+        </div>
+
+        <div class="services__cta" data-reveal>
+          <p>Точную стоимость работ для вашего автомобиля назовём по телефону — без навязанных услуг.</p>
+          <a href="tel:+79160808082" class="btn btn--primary" data-magnetic="0.25">Обсудить ремонт</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CARS ===== -->
+    <section class="section cars" id="cars">
+      <div class="container">
+        <header class="section__head" data-reveal>
+          <span class="section__num">03</span>
+          <div>
+            <p class="section__label">Направления обслуживания</p>
+            <h2 class="section__title" data-split-title>Китайский автопром —<br>наша <em>специализация</em></h2>
+          </div>
+        </header>
+
+        <div class="cars__layout">
+          <div class="cars__content" data-reveal>
+            <p>Мы обслуживаем внедорожники и кроссоверы Haval, Great Wall, Tank, Geely, Chery и JAC с первых дней их появления в России. Знаем типовые болячки каждой модели, держим расходники на складе и подбираем запчасти напрямую от проверенных поставщиков.</p>
+            <ul class="cars__brands" id="carsBrandsList" aria-label="Обслуживаемые марки автомобилей">
+              <li class="is-active" tabindex="0" role="button" data-brand="Haval" data-models="H2 · H5 · H9 · F7 · Dargo · Jolion" data-focus="Плановое ТО, замена масел в трансмиссии, муфте Haldex и редукторах, диагностика электрики, ремонт ДВС и подвески. Расходники на складе.">
+                <span>Haval</span><small>H2 · H5 · H9 · F7 · Dargo · Jolion</small>
+              </li>
+              <li tabindex="0" role="button" data-brand="Great Wall" data-models="Hover H3 · H5 · H6 · Wingle · Safe · Poer" data-focus="Капитальный ремонт моторов и КПП, переборка раздаток и мостов, ремонт рам, установка лебёдок, силовых бамперов и лифт подвески.">
+                <span>Great Wall</span><small>Hover H3 · H5 · H6 · Wingle · Safe · Poer</small>
+              </li>
+              <li tabindex="0" role="button" data-brand="Tank" data-models="300 · 500" data-focus="Квалифицированное ТО, обслуживание полного привода и блокировок, компьютерная диагностика, чип-тюнинг и экспедиционная подготовка.">
+                <span>Tank</span><small>300 · 500</small>
+              </li>
+              <li tabindex="0" role="button" data-brand="Geely" data-models="Monjaro · Atlas" data-focus="Плановое ТО, замена жидкостей в муфте Haldex и редукторах, компьютерная диагностика электроники, обслуживание тормозной системы и ДВС.">
+                <span>Geely</span><small>Monjaro · Atlas</small>
+              </li>
+              <li tabindex="0" role="button" data-brand="Chery / JAC" data-models="Tiggo · T8 · JS-серия" data-focus="Комплексная диагностика, обслуживание двигателей и трансмиссии, устранение сложных неисправностей проводки и подбор проверенных запчастей.">
+                <span>Chery / JAC</span><small>Tiggo · T8 · JS-серия</small>
+              </li>
+              <li tabindex="0" role="button" data-brand="Япония и Корея" data-models="Toyota · Mitsubishi · KIA · Hyundai" data-focus="Капитальный ремонт бензиновых и дизельных двигателей, замена ГРМ, ТНВД и турбин, переборка редукторов, кузовной ремонт и подготовка к бездорожью.">
+                <span>Япония и Корея</span><small>Toyota · Mitsubishi · KIA · Hyundai</small>
+              </li>
+            </ul>
+
+            <!-- Interactive Brand Dossier Bar -->
+            <div class="cars__dossier" id="carsDossier" aria-live="polite">
+              <div class="cars__dossier-head">
+                <strong id="carsDossierBrand">Haval</strong>
+                <span id="carsDossierModels">H2 · H5 · H9 · F7 · Dargo · Jolion</span>
+              </div>
+              <p id="carsDossierFocus">Плановое ТО, замена масел в трансмиссии, муфте Haldex и редукторах, диагностика электрики, ремонт ДВС и подвески. Расходники на складе.</p>
+            </div>
+
+            <p class="cars__note">Не нашли свой автомобиль в списке? Позвоните — честно скажем, возьмёмся ли за работу.</p>
+            <a href="tel:+79160808082" class="btn btn--ghost btn--arrow" data-magnetic="0.22">Получить консультацию</a>
+          </div>
+          <div class="cars__media" data-reveal="right">
+            <figure class="cars__photo" data-curtain>
+              <img src="assets/offroad-jeep.jpg" alt="Подготовленный к бездорожью Jeep Wrangler Rubicon в цехе Red Hot Service" loading="lazy">
+            </figure>
+            <figure class="cars__photo cars__photo--offset" data-curtain data-scroll-parallax="-20">
+              <img src="assets/offroad-wingle.jpg" alt="Great Wall Wingle с силовым бампером и дополнительным светом" loading="lazy">
+            </figure>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== ADVANTAGES ===== -->
+    <section class="section advantages" id="advantages">
+      <div class="container">
+        <header class="section__head" data-reveal>
+          <span class="section__num">04</span>
+          <div>
+            <p class="section__label">Преимущества</p>
+            <h2 class="section__title" data-split-title>Почему к нам возвращаются <em>годами</em></h2>
+          </div>
+        </header>
+
+        <div class="advantages__grid">
+          <article class="adv-card" data-reveal data-tilt="5">
+            <span class="adv-card__num">01</span>
+            <h3>Гибкий график</h3>
+            <ul>
+              <li>Приём 24 часа в сутки</li>
+              <li>Ремонт с 10:00 до 20:00</li>
+              <li>Выходной — только воскресенье</li>
+              <li>Свой эвакуатор</li>
+            </ul>
+          </article>
+          <article class="adv-card" data-reveal data-tilt="5">
+            <span class="adv-card__num">02</span>
+            <h3>Результат с гарантией</h3>
+            <ul>
+              <li>Гарантия до 12 месяцев</li>
+              <li>96,3% без возврата по гарантии</li>
+              <li>Тестируем каждый автомобиль</li>
+              <li>Вернулись — исправим бесплатно</li>
+            </ul>
+          </article>
+          <article class="adv-card" data-reveal data-tilt="5">
+            <span class="adv-card__num">03</span>
+            <h3>Разумная экономия</h3>
+            <ul>
+              <li>До двух раз дешевле официалов</li>
+              <li>Скидки на смежные работы</li>
+              <li>Без накруток за «срочность»</li>
+              <li>Рассрочка 0% до 10 месяцев</li>
+            </ul>
+          </article>
+          <article class="adv-card" data-reveal data-tilt="5">
+            <span class="adv-card__num">04</span>
+            <h3>Удобная оплата</h3>
+            <ul>
+              <li>Без предоплаты на ремонт до 150 тыс. ₽</li>
+              <li>Наличными и картой</li>
+              <li>Перевод с карты на карту</li>
+              <li>Оплата при приёмке работ</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== PROCESS ===== -->
+    <section class="section process" id="process">
+      <div class="container">
+        <header class="section__head" data-reveal>
+          <span class="section__num">05</span>
+          <div>
+            <p class="section__label">Процесс работы</p>
+            <h2 class="section__title" data-split-title>Пять шагов до исправного <em>автомобиля</em></h2>
+          </div>
+        </header>
+
+        <div class="process__layout">
+          <ol class="process__steps" id="processSteps">
+            <span class="process__track-fill" id="processTrackFill" aria-hidden="true"></span>
+            <li class="process__step is-active" data-reveal data-step-index="0" tabindex="0">
+              <span class="process__step-num">01</span>
+              <div>
+                <h3>Звонок</h3>
+                <p>Вы звоните, описываете симптомы. Уже по телефону подсказываем порядок цен и помогаем техпомощью, если сломались в пути.</p>
+              </div>
+            </li>
+            <li class="process__step" data-reveal data-step-index="1" tabindex="0">
+              <span class="process__step-num">02</span>
+              <div>
+                <h3>Диагностика</h3>
+                <p>Осматриваем автомобиль и находим причину, а не следствие. Вы можете присутствовать в ремзоне лично.</p>
+              </div>
+            </li>
+            <li class="process__step" data-reveal data-step-index="2" tabindex="0">
+              <span class="process__step-num">03</span>
+              <div>
+                <h3>Смета до начала работ</h3>
+                <p>Фиксируем бюджет и сроки заранее. Любые изменения — только с вашего согласия. Укладываемся в смету с точностью ±5%.</p>
+              </div>
+            </li>
+            <li class="process__step" data-reveal data-step-index="3" tabindex="0">
+              <span class="process__step-num">04</span>
+              <div>
+                <h3>Ремонт</h3>
+                <p>Работают мастера с опытом от 10 лет. Вы в курсе дела на каждом этапе, заменённые детали отдаём вам.</p>
+              </div>
+            </li>
+            <li class="process__step" data-reveal data-step-index="4" tabindex="0">
+              <span class="process__step-num">05</span>
+              <div>
+                <h3>Тест и выдача</h3>
+                <p>Тестируем каждый автомобиль перед выдачей, передаём подробный отчёт и гарантию до 12 месяцев.</p>
+              </div>
+            </li>
+          </ol>
+          <div class="process__media" data-reveal="right">
+            <figure data-curtain>
+              <span class="process__media-badge" id="processMediaBadge">ЭТАП 01 / 05 · КОНСУЛЬТАЦИЯ И ПРИЁМ</span>
+              <img src="assets/process-diagnostic.jpg" alt="Приёмка и диагностика автомобиля вместе с клиентом" loading="lazy">
+              <figcaption id="processMediaCaption">Диагностика при клиенте — показываем и объясняем каждую неисправность</figcaption>
+            </figure>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== GALLERY ===== -->
+    <section class="section gallery" id="gallery">
+      <div class="container">
+        <header class="section__head" data-reveal>
+          <span class="section__num">06</span>
+          <div>
+            <p class="section__label">Мастерская</p>
+            <h2 class="section__title" data-split-title>Ремзона, в которой<br>нечего <em>скрывать</em></h2>
+          </div>
+        </header>
+
+        <div class="gallery__grid" id="galleryGrid">
+          <figure class="gallery__item gallery__item--wide" data-reveal data-curtain data-gallery-index="0" tabindex="0" role="button" aria-label="Открыть фото: Ремонтная зона" data-cursor-text="ФОТО">
+            <img src="assets/hero-workshop.jpg" alt="Общий вид ремонтной зоны Red Hot Service" loading="lazy">
+            <span class="gallery__zoom-badge" aria-hidden="true">01 · УВЕЛИЧИТЬ</span>
+            <figcaption>Ремонтная зона</figcaption>
+          </figure>
+          <figure class="gallery__item" data-reveal data-curtain data-gallery-index="1" tabindex="0" role="button" aria-label="Открыть фото: Подготовка к бездорожью" data-cursor-text="ФОТО">
+            <img src="assets/offroad-jeep.jpg" alt="Jeep Wrangler после установки внедорожного оборудования" loading="lazy">
+            <span class="gallery__zoom-badge" aria-hidden="true">02 · УВЕЛИЧИТЬ</span>
+            <figcaption>Подготовка к бездорожью</figcaption>
+          </figure>
+          <figure class="gallery__item" data-reveal data-curtain data-gallery-index="2" tabindex="0" role="button" aria-label="Открыть фото: Моторный участок" data-cursor-text="ФОТО">
+            <img src="assets/service-engine.jpg" alt="Мастер собирает двигатель после капитального ремонта" loading="lazy">
+            <span class="gallery__zoom-badge" aria-hidden="true">03 · УВЕЛИЧИТЬ</span>
+            <figcaption>Моторный участок</figcaption>
+          </figure>
+          <figure class="gallery__item" data-reveal data-curtain data-gallery-index="3" tabindex="0" role="button" aria-label="Открыть фото: Выдача автомобиля" data-cursor-text="ФОТО">
+            <img src="assets/workshop-hover.jpg" alt="Great Wall Hover после обслуживания в сервисе" loading="lazy">
+            <span class="gallery__zoom-badge" aria-hidden="true">04 · УВЕЛИЧИТЬ</span>
+            <figcaption>Выдача автомобиля</figcaption>
+          </figure>
+          <figure class="gallery__item gallery__item--wide" data-reveal data-curtain data-gallery-index="4" tabindex="0" role="button" aria-label="Открыть фото: Трансмиссия и редукторы" data-cursor-text="ФОТО">
+            <img src="assets/workshop-parts.jpg" alt="Агрегаты трансмиссии в процессе переборки" loading="lazy">
+            <span class="gallery__zoom-badge" aria-hidden="true">05 · УВЕЛИЧИТЬ</span>
+            <figcaption>Трансмиссия и редукторы</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== REVIEWS ===== -->
+    <section class="section reviews" id="reviews">
+      <div class="container">
+        <header class="section__head" data-reveal>
+          <span class="section__num">07</span>
+          <div>
+            <p class="section__label">Отзывы клиентов</p>
+            <h2 class="section__title" data-split-title>Рейтинг 5.0 —<br>нам <em>доверяют</em></h2>
+          </div>
+        </header>
+
+        <div class="reviews__toolbar" data-reveal>
+          <div class="reviews__rating">
+            <span class="reviews__stars" aria-label="Оценка 5 из 5">★★★★★</span>
+            <p>5.0 — на основе 580 оценок и 296 отзывов на <a href="https://yandex.ru/maps/org/red_hot_service/156120945267/reviews/" target="_blank" rel="noopener">Яндекс Картах</a></p>
+          </div>
+          <div class="reviews__filters" role="group" aria-label="Фильтр отзывов">
+            <button type="button" class="reviews__filter is-active" data-review-filter="all">Все отзывы (6)</button>
+            <button type="button" class="reviews__filter" data-review-filter="china">Haval и Geely</button>
+            <button type="button" class="reviews__filter" data-review-filter="loyal">С нами годами</button>
+          </div>
+        </div>
+
+        <div class="reviews__grid" id="reviewsGrid">
+          <blockquote class="review-card" data-reveal data-tilt="4" data-review-cat="loyal">
+            <p>«Обслуживаюсь в этом сервисе с 2012 года. Ребята, как всегда, профессиональны, всегда помогут советом, денег не гребут, постоянно предлагают решение вопроса малыми средствами. В общем, твёрдая пятёрка».</p>
+            <footer>
+              <cite>Александр Жданкин</cite>
+              <span class="review-card__source">Яндекс Карты</span>
+            </footer>
+          </blockquote>
+          <blockquote class="review-card" data-reveal data-tilt="4" data-review-cat="china">
+            <p>«Самый лучший сервис в Москве по китайским автомобилям! Крысы прогрызли проводку — дилер зарядил больше 250 тысяч, ребята починили меньше чем за 20 тысяч, и всё работает как швейцарские часы».</p>
+            <footer>
+              <cite>Павел Агафонов</cite>
+              <span class="review-card__source">Яндекс Карты</span>
+            </footer>
+          </blockquote>
+          <blockquote class="review-card" data-reveal data-tilt="4" data-review-cat="china loyal">
+            <p>«Обслуживаю Haval F7 уже 3–4 года. Цены адекватные, без скрытых сюрпризов. Всегда скажут как есть: если что-то делать нужно — объяснят почему, если не надо — тоже прямо скажут».</p>
+            <footer>
+              <cite>Клиент сервиса</cite>
+              <span class="review-card__source">Яндекс Карты</span>
+            </footer>
+          </blockquote>
+          <blockquote class="review-card" data-reveal data-tilt="4" data-review-cat="china">
+            <p>«Был на плановом ТО Haval H9 с заменой масел в трансмиссии. На дополнительные работы не разводят, делают всё по факту и необходимости, в отличие от официалов. Цены адекватные».</p>
+            <footer>
+              <cite>Клиент сервиса</cite>
+              <span class="review-card__source">Яндекс Карты</span>
+            </footer>
+          </blockquote>
+          <blockquote class="review-card" data-reveal data-tilt="4" data-review-cat="loyal">
+            <p>«Обслуживаюсь у ребят с 2016 года. Никогда лишнего не возьмут, всё сделают быстро, чётко и качественно. А когда говорю „давайте поменяем ещё что-то“ — ругают: отживёт своё, тогда и поменяем».</p>
+            <footer>
+              <cite>Клиент сервиса</cite>
+              <span class="review-card__source">Яндекс Карты</span>
+            </footer>
+          </blockquote>
+          <blockquote class="review-card" data-reveal data-tilt="4" data-review-cat="china">
+            <p>«Был со своим Geely Monjaro на плановом ТО и замене жидкостей в муфте Haldex и редукторах. Всё сделано быстро и качественно, цены намного ниже, чем в любом клубном сервисе Москвы».</p>
+            <footer>
+              <cite>Клиент сервиса</cite>
+              <span class="review-card__source">Яндекс Карты</span>
+            </footer>
+          </blockquote>
+        </div>
+
+        <div class="reviews__more" data-reveal>
+          <a href="https://yandex.ru/maps/org/red_hot_service/156120945267/reviews/" target="_blank" rel="noopener" class="btn btn--ghost btn--arrow" data-magnetic="0.2">Читать все отзывы на Яндекс Картах</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== FAQ ===== -->
+    <section class="section faq" id="faq">
+      <div class="container container--narrow">
+        <header class="section__head" data-reveal>
+          <span class="section__num">08</span>
+          <div>
+            <p class="section__label">Вопросы и ответы</p>
+            <h2 class="section__title" data-split-title>Частые <em>вопросы</em></h2>
+          </div>
+        </header>
+
+        <div class="faq__list">
+          <details class="faq__item" data-reveal>
+            <summary>Можно ли привезти свои запчасти?<span class="faq__icon" aria-hidden="true"></span></summary>
+            <div class="faq__answer"><p>Да. Привозите свои запчасти — возьмём оплату только за работу. Если запчастей нет, подберём оригинал или проверенный аналог со склада либо закажем у поставщиков и сориентируем по цене заранее.</p></div>
+          </details>
+          <details class="faq__item" data-reveal>
+            <summary>Даёте ли вы гарантию на работы?<span class="faq__icon" aria-hidden="true"></span></summary>
+            <div class="faq__answer"><p>Да, гарантия на выполненные работы — до 12 месяцев. 96,3% автомобилей не возвращаются по гарантии. Если проблема повторилась — исправим бесплатно.</p></div>
+          </details>
+          <details class="faq__item" data-reveal>
+            <summary>Нужна ли предоплата?<span class="faq__icon" aria-hidden="true"></span></summary>
+            <div class="faq__answer"><p>На ремонт стоимостью до 150 тысяч рублей предоплата не нужна — вы платите за проделанные работы при приёмке. Доступны наличные, карта и перевод с карты на карту, а также рассрочка 0% от 6 месяцев.</p></div>
+          </details>
+          <details class="faq__item" data-reveal>
+            <summary>Можно ли присутствовать при ремонте?<span class="faq__icon" aria-hidden="true"></span></summary>
+            <div class="faq__answer"><p>Да, доступ в ремзону свободный. Мастер покажет состояние агрегатов, объяснит, что нужно менять сразу, а с чем можно подождать. Все заменённые детали отдаём вам.</p></div>
+          </details>
+          <details class="faq__item" data-reveal>
+            <summary>Как оставить автомобиль в нерабочее время?<span class="faq__icon" aria-hidden="true"></span></summary>
+            <div class="faq__answer"><p>Приём работает 24 часа в сутки: можно оставить автомобиль и ключи на посту охраны. Ремонт выполняется с 10:00 до 20:00, выходной — воскресенье.</p></div>
+          </details>
+          <details class="faq__item" data-reveal>
+            <summary>Сломался в пути — что делать?<span class="faq__icon" aria-hidden="true"></span></summary>
+            <div class="faq__answer"><p>Звоните: окажем техническую помощь по телефону, а при необходимости отправим свой эвакуатор — <a href="tel:+79258940754">+7 (925) 894-07-54</a>. Если вы далеко от Москвы, направим к нашим партнёрам в регионах.</p></div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CONTACTS ===== -->
+    <section class="section contacts" id="contacts">
+      <div class="container">
+        <header class="section__head" data-reveal>
+          <span class="section__num">09</span>
+          <div>
+            <p class="section__label">Контакты</p>
+            <h2 class="section__title" data-split-title>Ждём вас в <em>Тураево</em></h2>
+          </div>
+        </header>
+
+        <div class="contacts__grid">
+          <div class="contacts__info" data-reveal>
+            <div class="contacts__status" id="workshopStatusBadge">
+              <span class="contacts__status-ind" aria-hidden="true"></span>
+              <span id="workshopStatusText">Приём автомобилей открыт 24/7 · Пн–Сб 10:00–20:00</span>
+            </div>
+
+            <div class="contacts__block">
+              <h3>Адрес</h3>
+              <p>Московская область, Лыткарино,<br>территория промзоны Тураево, 7А</p>
+              <button type="button" class="contacts__copy-btn" data-copy="Московская область, Лыткарино, территория промзоны Тураево, 7А" aria-label="Скопировать адрес">Скопировать адрес</button>
+            </div>
+            <div class="contacts__block">
+              <h3>Телефоны</h3>
+              <div class="contacts__phone-row">
+                <a href="tel:+79160808082" class="contacts__phone">+7 (916) 080-80-82</a>
+                <button type="button" class="contacts__copy-btn" data-copy="+7 (916) 080-80-82" aria-label="Скопировать основной телефон">Копировать</button>
+              </div>
+              <span class="contacts__hint">основной — ремонт и консультации</span>
+
+              <div class="contacts__phone-row contacts__phone-row--mt">
+                <a href="tel:+79258940754" class="contacts__phone">+7 (925) 894-07-54</a>
+                <button type="button" class="contacts__copy-btn" data-copy="+7 (925) 894-07-54" aria-label="Скопировать телефон эвакуатора">Копировать</button>
+              </div>
+              <span class="contacts__hint">эвакуатор — круглосуточно</span>
+            </div>
+            <div class="contacts__block">
+              <h3>График работы</h3>
+              <p>Пн–Сб: 10:00 — 20:00<br>Воскресенье — выходной<br><span class="contacts__hint">Приём автомобиля — 24 часа в сутки</span></p>
+            </div>
+            <div class="contacts__actions">
+              <a href="tel:+79160808082" class="btn btn--primary" data-magnetic="0.25">Позвонить сейчас</a>
+              <a href="https://yandex.ru/maps/?rtext=~55.566164%2C37.938587&rtt=auto" target="_blank" rel="noopener" class="btn btn--ghost btn--arrow" data-magnetic="0.2">Построить маршрут</a>
+            </div>
+          </div>
+
+          <div class="contacts__map" data-reveal="right">
+            <iframe
+              src="https://yandex.ru/map-widget/v1/?ll=37.938587%2C55.566164&z=16&pt=37.938587,55.566164,pm2rdm"
+              title="Red Hot Service на карте — Лыткарино, промзона Тураево, 7А"
+              loading="lazy"
+              allowfullscreen
+              referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <img src="assets/logo.png" alt="Red Hot Service" width="40" height="40" loading="lazy">
+        <div>
+          <p class="footer__name">RED HOT SERVICE</p>
+          <p class="footer__tag">Ремонт, обслуживание и подготовка внедорожников и кроссоверов</p>
+        </div>
+      </div>
+      <div class="footer__col">
+        <p class="footer__head">Контакты</p>
+        <a href="tel:+79160808082">+7 (916) 080-80-82</a>
+        <a href="tel:+79258940754">Эвакуатор: +7 (925) 894-07-54</a>
+        <span>Лыткарино, промзона Тураево, 7А</span>
+      </div>
+      <div class="footer__col">
+        <p class="footer__head">Навигация</p>
+        <a href="#services">Услуги</a>
+        <a href="#cars">Автомобили</a>
+        <a href="#reviews">Отзывы</a>
+        <a href="#contacts">Контакты</a>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <div class="container footer__bottom-inner">
+        <span>© <span id="year">2026</span> Red Hot Service. Все права защищены.</span>
+        <span>Пн–Сб 10:00–20:00 · Вс — выходной</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===== FULLSCREEN GALLERY LIGHTBOX ===== -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-hidden="true" aria-label="Полноэкранный просмотр фотографий мастерской">
+    <div class="lightbox__backdrop" id="lightboxBackdrop"></div>
+    <div class="lightbox__topbar">
+      <span class="lightbox__counter" id="lightboxCounter">01 / 05</span>
+      <button type="button" class="lightbox__close" id="lightboxClose" aria-label="Закрыть просмотр">
+        <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+    </div>
+    <div class="lightbox__stage" id="lightboxStage">
+      <button type="button" class="lightbox__nav lightbox__nav--prev" id="lightboxPrev" aria-label="Предыдущее фото">
+        <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+      </button>
+      <figure class="lightbox__figure">
+        <img class="lightbox__img" id="lightboxImg" src="assets/hero-workshop.jpg" alt="">
+        <figcaption class="lightbox__caption" id="lightboxCaption">Ремонтная зона</figcaption>
+      </figure>
+      <button type="button" class="lightbox__nav lightbox__nav--next" id="lightboxNext" aria-label="Следующее фото">
+        <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+      </button>
+    </div>
+    <div class="lightbox__thumbs" id="lightboxThumbs" role="tablist" aria-label="Миниатюры фотографий"></div>
+  </div>
+
+  <!-- ===== TOAST NOTIFICATION ===== -->
+  <div class="toast" id="copyToast" role="status" aria-live="polite" aria-hidden="true"></div>
+
+  <!-- ===== MOBILE CALL BUTTON ===== -->
+  <a href="tel:+79160808082" class="call-fab" aria-label="Позвонить в Red Hot Service">
+    <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+  </a>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
