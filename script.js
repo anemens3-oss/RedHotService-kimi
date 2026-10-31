@@ -891,7 +891,102 @@
     });
   });
 
-  /* ---------- 19. Footer Year ---------- */
+  /* ---------- 19. Official Social Links Config & 2GIS Price List Accordion ---------- */
+  var RH_SOCIAL_LINKS = {
+    youtube: 'https://www.youtube.com/@RedHotService',
+    vk: 'https://vk.com/red_hot_service',
+    whatsapp: 'https://wa.me/79160808082',
+    twogis: 'https://2gis.ru/lytkarino/firm/70000001018836416',
+    twogisPrices: 'https://2gis.ru/lytkarino/firm/70000001018836416/tab/prices'
+  };
+  window.RH_SOCIAL_LINKS = RH_SOCIAL_LINKS;
+
+  Array.prototype.slice.call(document.querySelectorAll('[data-social-link]')).forEach(function (el) {
+    var key = el.getAttribute('data-social-link');
+    if (key && RH_SOCIAL_LINKS[key]) {
+      el.setAttribute('href', RH_SOCIAL_LINKS[key]);
+    }
+  });
+
+  var priceCats = Array.prototype.slice.call(document.querySelectorAll('.price-cat'));
+  priceCats.forEach(function (cat) {
+    var summary = cat.querySelector('.price-cat__summary');
+    var body = cat.querySelector('.price-cat__body');
+    if (!summary || !body) return;
+
+    summary.addEventListener('click', function (e) {
+      if (prefersReducedMotion || typeof body.animate !== 'function') return;
+      e.preventDefault();
+
+      if (cat.open) {
+        var closeAnim = body.animate(
+          [{ height: body.scrollHeight + 'px', opacity: 1 }, { height: '0px', opacity: 0 }],
+          { duration: 300, easing: 'cubic-bezier(0.83, 0, 0.17, 1)' }
+        );
+        closeAnim.onfinish = function () { cat.open = false; };
+      } else {
+        cat.open = true;
+        body.animate(
+          [{ height: '0px', opacity: 0 }, { height: body.scrollHeight + 'px', opacity: 1 }],
+          { duration: 380, easing: 'cubic-bezier(0.22, 1, 0.36, 1)' }
+        );
+      }
+    });
+  });
+
+  var expandAllBtn = document.getElementById('priceExpandAll');
+  var collapseAllBtn = document.getElementById('priceCollapseAll');
+  var priceSearchInput = document.getElementById('priceSearchInput');
+  var pricesEmptyMsg = document.getElementById('pricesEmptyMsg');
+
+  if (expandAllBtn) {
+    expandAllBtn.addEventListener('click', function () {
+      priceCats.forEach(function (cat) {
+        if (!cat.hidden) cat.open = true;
+      });
+    });
+  }
+
+  if (collapseAllBtn) {
+    collapseAllBtn.addEventListener('click', function () {
+      priceCats.forEach(function (cat) {
+        cat.open = false;
+      });
+    });
+  }
+
+  if (priceSearchInput) {
+    priceSearchInput.addEventListener('input', function () {
+      var q = (priceSearchInput.value || '').trim().toLowerCase();
+      var totalVisibleRows = 0;
+
+      priceCats.forEach(function (cat, idx) {
+        var rows = Array.prototype.slice.call(cat.querySelectorAll('.price-row'));
+        var catMatches = 0;
+        rows.forEach(function (row) {
+          var text = (row.textContent || '').toLowerCase();
+          var isMatch = !q || text.indexOf(q) !== -1;
+          row.hidden = !isMatch;
+          if (isMatch) catMatches++;
+        });
+
+        cat.hidden = catMatches === 0;
+        if (q) {
+          cat.open = catMatches > 0;
+        } else {
+          cat.open = idx === 0;
+        }
+        totalVisibleRows += catMatches;
+      });
+
+      if (pricesEmptyMsg) {
+        pricesEmptyMsg.hidden = totalVisibleRows > 0;
+      }
+    });
+  }
+
+  /* ---------- 20. Footer Year ---------- */
   var yearEl = document.getElementById('year');
   if (yearEl) yearEl.textContent = String(new Date().getFullYear());
 })();
+

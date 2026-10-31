@@ -457,6 +457,719 @@
       </div>
     </section>
 
+    <!-- ===== PRICES (OFFICIAL 2GIS PRICE LIST) ===== -->
+    <section class="section prices" id="prices">
+      <div class="container">
+        <header class="section__head" data-reveal>
+          <span class="section__num">2ГИС</span>
+          <div>
+            <p class="section__label">Официальный прейскурант</p>
+            <h2 class="section__title" data-split-title>Цены на <em>услуги</em></h2>
+          </div>
+        </header>
+
+        <div class="prices__notice" data-reveal>
+          <div class="prices__notice-body">
+            <span class="prices__notice-tag">ДАННЫЕ ОФИЦИАЛЬНОЙ КАРТОЧКИ 2ГИС</span>
+            <p>В списке ниже приведены реальные базовые расценки из официального прайс-листа Red Hot Service в 2ГИС без изменений. Обратите внимание на пометки к позициям (<strong>работа</strong>, <strong>работа + запчасти</strong>, <strong>работа + расходные материалы</strong>). Итоговая стоимость зависит от конкретной марки, модели, года выпуска, объёма двигателя и сложности доступа к узлу; при выполнении смежных работ действует скидка до 100% на сопутствующие операции.</p>
+          </div>
+          <div class="prices__toolbar">
+            <label class="prices__search" for="priceSearchInput">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+              <input type="search" id="priceSearchInput" placeholder="Поиск услуги в прайс-листе (например: ГРМ, колодки, ТНВД, сход-развал)..." autocomplete="off">
+            </label>
+            <div class="prices__controls">
+              <button type="button" class="prices__ctrl-btn" id="priceExpandAll">Развернуть все</button>
+              <button type="button" class="prices__ctrl-btn" id="priceCollapseAll">Свернуть все</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="prices__categories" id="pricesAccordion">
+          <!-- Category 1: Диагностика -->
+          <details class="price-cat" data-reveal open>
+            <summary class="price-cat__summary">
+              <span class="price-cat__index">P.01</span>
+              <span class="price-cat__title">Диагностика и проверка систем</span>
+              <span class="price-cat__count">7 услуг · от 550 ₽</span>
+              <span class="price-cat__icon" aria-hidden="true"></span>
+            </summary>
+            <div class="price-cat__body">
+              <ul class="price-list">
+                <li class="price-row">
+                  <div class="price-row__info">
+                    <h4>Диагностика подвески</h4>
+                    <p>Полный осмотр агрегатов подвески (рычаги, шаровые, амортизаторы, пружины, сайлентблоки, рулевые тяги и наконечники, опоры и подушки двигателя и КПП) · работа</p>
+                  </div>
+                  <span class="price-row__val">550 ₽</span>
+                </li>
+                <li class="price-row">
+                  <div class="price-row__info">
+                    <h4>Диагностика технических жидкостей</h4>
+                    <p>Проверка состояния и уровня масел в трансмиссии, жидкости гидроусилителя, тормозной жидкости, жидкости сцепления</p>
+                  </div>
+                  <span class="price-row__val">550 ₽</span>
+                </li>
+                <li class="price-row">
+                  <div class="price-row__info">
+                    <h4>Диагностика подвески и тормозных механизмов</h4>
+                    <p>Проверка состояния агрегатов подвески, крепления кузова к раме, люфтов в подвеске, состояния сайлентблоков, износа тормозных колодок и дисков · работа</p>
+                  </div>
+                  <span class="price-row__val">550 ₽</span>
+                </li>
+                <li class="price-row">
+                  <div class="price-row__info">
+                    <h4>Диагностика топливной системы</h4>
+                    <p>Проверка работоспособности топливных форсунок, общая диагностика топливного насоса</p>
+                  </div>
+                  <span class="price-row__val">1 100 ₽</span>
+                </li>
+                <li class="price-row">
+                  <div class="price-row__info">
+                    <h4>Компьютерная диагностика</h4>
+                    <p>Общая диагностика электронных систем управления двигателем · работа (в зависимости от модели: 1 100 ₽ / 1 500 ₽)</p>
+                  </div>
+                  <span class="price-row__val">1 500 ₽</span>
+                </li>
+                <li class="price-row">
+                  <div class="price-row__info">
+                    <h4>Компьютерная диагностика (с применением дополнительного оборудования)</h4>
+                    <p>Проверка технического состояния двигателя и поиск неисправностей в механике работы двигателя с помощью специального оборудования</p>
+                  </div>
+                  <span class="price-row__val">2 500 ₽</span>
+                </li>
+                <li class="price-row">
+                  <div class="price-row__info">
+                    <h4>Диагностика мотор-тестером</h4>
+                    <p>Проверка технического состояния двигателя и поиск неисправностей в механике работы двигателя с помощью специального оборудования</p>
+                  </div>
+                  <span class="price-row__val">2 540 ₽</span>
+                </li>
+              </ul>
+            </div>
+          </details>
+
+          <!-- Category 2: Плановое ТО и замена жидкостей -->
+          <details class="price-cat" data-reveal>
+            <summary class="price-cat__summary">
+              <span class="price-cat__index">P.02</span>
+              <span class="price-cat__title">Плановое ТО и замена технических жидкостей</span>
+              <span class="price-cat__count">14 услуг · от 863 ₽</span>
+              <span class="price-cat__icon" aria-hidden="true"></span>
+            </summary>
+            <div class="price-cat__body">
+              <ul class="price-list">
+                <li class="price-row">
+                  <div class="price-row__info">
+                    <h4>Замена масла в двигателе и масляного фильтра</h4>
+                    <p>Работа (включая снятие/установку защиты картера)</p>
+                  </div>
+                  <span class="price-row__val">863 ₽</span>
+                </li>
+                <li class="price-row">
+                  <div class="price-row__info">
+                    <h4>Фильтр салонный Н/О (для авто от 2013 года), замена</h4>
+                    <p>Работа + запчасти</p>
+                  </div>
+                  <span class="price-row__val">980 ₽</span>
+                </li>
+                <li class="price-row">
+                  <div class="price-row__info">
+                    <h4>Фильтр салонный С/О (для авто от 2013 года), замена</h4>
+                    <p>Работа + запчасти</p>
+                  </div>
+                  <span class="price-row__val">1 100 ₽</span>
+                </li>
+                <li class="price-row">
+                  <div class="price-row__info">
+                    <h4>Жидкость сцепления, замена с прокачкой</h4>
+                    <p>Работа + запчасти</p>
+                  </div>
+                  <span class="price-row__val">1 260 ₽</span>
+                </li>
+                <li class="price-row">
+                  <div class="price-row__info">
+                    <h4>Замена тормозной жидкости с прокачкой</h4>
+                    <p>Работа + расходники</p>
+                  </div>
+                  <span class="price-row__val">1 357 ₽</span>
+                </li>
+                <li class="price-row">
+                  <div class="price-row__info">
+                    <h4>Замена жидкости ГУР (гидроусилителя руля) с прокачкой</h4>
+                    <p>Работа + запчасти (замена жидкости ГУР с промывкой, работа — 1 830 ₽)</p>
+                  </div>
+                  <span class="price-row__val">1 580 ₽</span>
+                </li>
+                <li class="price-row">
+                  <div class="price-row__info">
+                    <h4>Замена антифриза с прокачкой системы охлаждения</h4>
+                    <p>Работа + товары (зависит от объёма системы охлаждения: 2 690 ₽ / 2 800 ₽)</p>
+                  </div>
+                  <span class="price-row__val">2 690 ₽</span>
+                </li>
+                <li class="price-row">
+                  <div class="price-row__info">
+                    <h4>Стандартное ТО (1 раз в 10 000 км, бензиновый ДВС)</h4>
+                    <p>Замена масла в ДВС, фильтров воздушного, масляного, диагностика подвески, тормозной системы и технических жидкостей · работа + запчасти</p>
+                  </div>
+                  <span class="price-row__val">7 475 ₽</span>
+                </li>
+                <li class="price-row">
+                  <div class="price-row__info">
+                    <h4>Стандартное ТО (1 раз в 10 000 км, с топливным фильтром)</h4>
+                    <p>Замена масла в ДВС, фильтров воздушного, масляного, топливного, диагностика подвески, тормозной системы и технических жидкостей · работа + запчасти</p>
+                  </div>
+                  <span class="price-row__val">8 165 ₽</span>
+                </li>
+                <li class="price-row">
+                  <div class="price-row__info">
+                    <h4>ТО 35–40 тысяч км</h4>
+                    <p>Комплекс Стандартного ТО + масла в трансмиссии (передний мост, задний мост, раздаточная коробка, МКПП) · работа + запчасти</p>
+                  </div>
+                  <span class="price-row__val">14 518 ₽</span>
+                </li>
+                <li class="price-row">
+                  <div class="price-row__info">
+                    <h4>Замена масла в ДВС и фильтров (с топливным фильтром грубой очистки)</h4>
+                    <p>Замена масла в ДВС, фильтров воздушного, масляного, топливного (грубой очистки), диагностика подвески, тормозной системы и тех. жидкостей · работа + запчасти</p>
+                  </div>
+                  <span class="price-row__val">18 141 ₽</span>
+                </li>
+                <li class="price-row">
+                  <div class="price-row__info">
+                    <h4>Среднее ТО (1 раз в 30–40 тысяч км, дизельный ДВС)</h4>
+                    <p>Стандартное ТО, замена масел в трансмиссии (коробка, мосты, раздаточная коробка) · работа + запчасти</p>
+                  </div>
+                  <span class="price-row__val">19 803 ₽</span>
+                </li>
+                <li class="price-row">
+                  <div class="price-row__info">
+                    <h4>Среднее ТО (1 раз в 30–40 тысяч км, бензиновый ДВС)</h4>
+                    <p>Стандартное ТО, замена масел в трансмиссии (коробка, мосты, раздаточная коробка) · работа + запчасти (в зависимости от модели: 24 783 ₽ / 26 444 ₽)</p>
+                  </div>
+                  <span class="price-row__val">24 783 ₽</span>
+                </li>
+                <li class="price-row">
+                  <div class="price-row__info">
+                    <h4>ТО 60–70 тысяч км / Большое ТО (1 раз в 70–90 тысяч км)</h4>
+                    <p>Замена ГРМ, комплекс стандартного ТО, диагностика ходовой, проверка жидкостей (26 581 ₽) · Большое ТО с заменой масла в АКПП и топливного фильтра в баке (35 450 ₽) · работа + запчасти</p>
+                  </div>
+                  <span class="price-row__val">26 581 ₽</span>
+                </li>
+              </ul>
+            </div>
+          </details>
+
+          <!-- Category 3: Двигатель, топливная система, турбины и выхлоп -->
+          <details class="price-cat" data-reveal>
+            <summary class="price-cat__summary">
+              <span class="price-cat__index">P.03</span>
+              <span class="price-cat__title">Двигатель, топливная система, турбины и выхлоп</span>
+              <span class="price-cat__count">18 услуг · от 760 ₽</span>
+              <span class="price-cat__icon" aria-hidden="true"></span>
+            </summary>
+            <div class="price-cat__body">
+              <ul class="price-list">
+                <li class="price-row">
+                  <div class="price-row__info">
+                    <h4>Чистка РХХ (регулятора холостого хода)</h4>
+                    <p>Снятие/установка, чистка регулятора холостого хода · работа</p>
+                  </div>
+                  <span class="price-row__val">760 ₽</span>
+                </li>
+                <li class="price-row">
+                  <div class="price-row__info">
+                    <h4>Чистка дроссельной заслонки</h4>
+                    <p>Работа + расходники</p>
+                  </div>
+                  <span class="price-row__val">980 ₽</span>
+                </li>
+                <li class="price-row">
+                  <div class="price-row__info">
+                    <h4>Ремонт выхлопной системы</h4>
+                    <p>Снятие/установка, сварочные работы · работа</p>
+                  </div>
+                  <span class="price-row__val">1 430 ₽</span>
+                </li>
+                <li class="price-row">
+                  <div class="price-row__info">
+                    <h4>Замена прокладки(ок) впускного коллектора</h4>
+                    <p>Работа</p>
+                  </div>
+                  <span class="price-row__val">1 518 ₽</span>
+                </li>
+                <li class="price-row">
+                  <div class="price-row__info">
+                    <h4>Замена радиатора охлаждения</h4>
+                    <p>Снятие/установка, частичная замена охлаждающей жидкости, прокачка системы охлаждения · работа</p>
+                  </div>
+                  <span class="price-row__val">2 860 ₽</span>
+                </li>
+                <li class="price-row">
+                  <div class="price-row__info">
+                    <h4>Замена гофры глушителя</h4>
+                    <p>Снятие/установка приёмной трубы, удаление неисправной гофры глушителя, вварка гофры, проверка герметичности выхлопной системы · работа + запчасти</p>
+                  </div>
+                  <span class="price-row__val">4 200 ₽</span>
+                </li>
+                <li class="price-row">
+                  <div class="price-row__info">
+                    <h4>Топливные форсунки (инжектор), промывка</h4>
+                    <p>Промывка со снятием топливной рампы · работа + запчасти</p>
+                  </div>
+                  <span class="price-row__val">4 380 ₽</span>
+                </li>
+                <li class="price-row">
+                  <div class="price-row__info">
+                    <h4>Удаление катализатора</h4>
+                    <p>Установка пламегасителя с удалением катализатора · работа + товары</p>
+                  </div>
+                  <span class="price-row__val">6 270 ₽</span>
+                </li>
+                <li class="price-row">
+                  <div class="price-row__info">
+                    <h4>Ремонт топливной форсунки / Диагностика дизельных форсунок на стенде</h4>
+                    <p>Снять/поставить топливную форсунку, разобрать/собрать, поменять начинку, настроить на стенде · работа (комплекс топливной системы — от 7 274 ₽)</p>
+                  </div>
+                  <span class="price-row__val">7 460 ₽</span>
+                </li>
+                <li class="price-row">
+                  <div class="price-row__info">
+                    <h4>Замена прокладки выпускного коллектора</h4>
+                    <p>Работа</p>
+                  </div>
+                  <span class="price-row__val">8 163 ₽</span>
+                </li>
+                <li class="price-row">
+                  <div class="price-row__info">
+                    <h4>Замена ремня ГРМ и роликов ГРМ</h4>
+                    <p>Работа (без учёта запчастей)</p>
+                  </div>
+                  <span class="price-row__val">8 500 ₽</span>
+                </li>
+                <li class="price-row">
+                  <div class="price-row__info">
+                    <h4>Глушитель (задняя часть), замена</h4>
+                    <p>Работа + запчасти</p>
+                  </div>
+                  <span class="price-row__val">8 500 ₽</span>
+                </li>
+                <li class="price-row">
+                  <div class="price-row__info">
+                    <h4>Радиатор охлаждения ДВС, замена + антифриз</h4>
+                    <p>Замена радиатора охлаждения ДВС и антифриза · работа + запчасти</p>
+                  </div>
+                  <span class="price-row__val">9 340 ₽</span>
+                </li>
+                <li class="price-row">
+                  <div class="price-row__info">
+                    <h4>Чистка топливной системы и магистралей</h4>
+                    <p>Магистрали и трубки на форсунках (9 085 ₽) · со снятием бака, чисткой рампы в УЗ-ванне и заменой фильтров (9 875 ₽) · со стендовой проверкой форсунок (12 169 ₽)</p>
+                  </div>
+                  <span class="price-row__val">9 875 ₽</span>
+                </li>
+                <li class="price-row">
+                  <div class="price-row__info">
+                    <h4>Ремонт и диагностика ТНВД (топливный насос высокого давления)</h4>
+                    <p>Снять/поставить ТНВД, разобрать/собрать ТНВД, поменять начинку, настроить ТНВД на стенде · работа + запчасти</p>
+                  </div>
+                  <span class="price-row__val">12 600 ₽</span>
+                </li>
+                <li class="price-row">
+                  <div class="price-row__info">
+                    <h4>Снятие и установка двигателя (ДВС)</h4>
+                    <p>Замена двигателя с перестановкой навесного оборудования · работа (зависит от объёма и модели ДВС: 18 975 ₽ / 20 873 ₽ / 23 403 ₽ / для ДВС 2,7 и 3,5 — 25 438 ₽)</p>
+                  </div>
+                  <span class="price-row__val">18 975 ₽</span>
+                </li>
+                <li class="price-row">
+                  <div class="price-row__info">
+                    <h4>Ремонт турбины</h4>
+                    <p>Снять/поставить турбину, разобрать/собрать, замена необходимых комплектующих, восстановление геометрии наддува, настройка турбины · работа + запчасти</p>
+                  </div>
+                  <span class="price-row__val">19 000 ₽</span>
+                </li>
+                <li class="price-row">
+                  <div class="price-row__info">
+                    <h4>Замена прокладки(ок) ГБЦ / Ремонт дизельных двигателей</h4>
+                    <p>Замена прокладки ГБЦ (работа — 33 666 ₽) · комплексный ремонт дизельных двигателей — 45 520 ₽</p>
+                  </div>
+                  <span class="price-row__val">33 666 ₽</span>
+                </li>
+              </ul>
+            </div>
+          </details>
+
+          <!-- Category 4: Подвеска, рулевое управление и сход-развал -->
+          <details class="price-cat" data-reveal>
+            <summary class="price-cat__summary">
+              <span class="price-cat__index">P.04</span>
+              <span class="price-cat__title">Подвеска, рулевое управление и сход-развал</span>
+              <span class="price-cat__count">14 услуг · от 400 ₽</span>
+              <span class="price-cat__icon" aria-hidden="true"></span>
+            </summary>
+            <div class="price-cat__body">
+              <ul class="price-list">
+                <li class="price-row">
+                  <div class="price-row__info">
+                    <h4>Перепрессовка сайлентблока агрегата подвески</h4>
+                    <p>При снятом рычаге, цена за 1 сайлентблок · работа, без запчастей (400 ₽ / 403 ₽)</p>
+                  </div>
+                  <span class="price-row__val">400 ₽</span>
+                </li>
+                <li class="price-row">
+                  <div class="price-row__info">
+                    <h4>Замена стойки стабилизатора (1 шт.)</h4>
+                    <p>Демонтаж старой, установка новой · работа, без запчастей (633 ₽ / 800 ₽ в зависимости от подвески)</p>
+                  </div>
+                  <span class="price-row__val">633 ₽</span>
+                </li>
+                <li class="price-row">
+                  <div class="price-row__info">
+                    <h4>Замена амортизатора / стойки амортизатора</h4>
+                    <p>Снятие/установка амортизатора (работа — 880 ₽) · замена амортизаторной стойки в сборе (работа — 2 125 ₽)</p>
+                  </div>
+                  <span class="price-row__val">880 ₽</span>
+                </li>
+                <li class="price-row">
+                  <div class="price-row__info">
+                    <h4>Замена пружины подвески</h4>
+                    <p>Снятие/установка · работа (базовые работы по подвеске и трансмиссии — от 1 200 ₽)</p>
+                  </div>
+                  <span class="price-row__val">1 265 ₽</span>
+                </li>
+                <li class="price-row">
+                  <div class="price-row__info">
+                    <h4>Замена рычага (для многорычажной системы)</h4>
+                    <p>Продольный верхний, продольный нижний или поперечный рычаг · работа, без запчастей (1 840 ₽ / 2 000 ₽)</p>
+                  </div>
+                  <span class="price-row__val">1 840 ₽</span>
+                </li>
+                <li class="price-row">
+                  <div class="price-row__info">
+                    <h4>Замена ступичного подшипника</h4>
+                    <p>Работа, без запчастей (в зависимости от конструкции ступицы: 2 100 ₽ / 2 415 ₽ / со сбором-разбором 2 625 ₽)</p>
+                  </div>
+                  <span class="price-row__val">2 100 ₽</span>
+                </li>
+                <li class="price-row">
+                  <div class="price-row__info">
+                    <h4>Замена шаровой опоры нижней (без снятия рычага)</h4>
+                    <p>Работа</p>
+                  </div>
+                  <span class="price-row__val">2 128 ₽</span>
+                </li>
+                <li class="price-row">
+                  <div class="price-row__info">
+                    <h4>Сход-развал</h4>
+                    <p>Полный сход-развал (выставление углов развала и схождения колёс) · работа</p>
+                  </div>
+                  <span class="price-row__val">2 500 ₽</span>
+                </li>
+                <li class="price-row">
+                  <div class="price-row__info">
+                    <h4>Замена подшипников поворотного кулака</h4>
+                    <p>Работа, без запчастей (2 760 ₽ / со сбором и разбором узла — 3 000 ₽)</p>
+                  </div>
+                  <span class="price-row__val">2 760 ₽</span>
+                </li>
+                <li class="price-row">
+                  <div class="price-row__info">
+                    <h4>Замена верхнего рычага подвески</h4>
+                    <p>Снятие/установка, перестановка шаровой опоры · работа</p>
+                  </div>
+                  <span class="price-row__val">3 220 ₽</span>
+                </li>
+                <li class="price-row">
+                  <div class="price-row__info">
+                    <h4>Замена нижнего рычага подвески</h4>
+                    <p>Снятие/установка, перестановка шаровой опоры · работа</p>
+                  </div>
+                  <span class="price-row__val">4 485 ₽</span>
+                </li>
+                <li class="price-row">
+                  <div class="price-row__info">
+                    <h4>Шаровые опоры верхние (левая и правая), замена</h4>
+                    <p>Работа + товары</p>
+                  </div>
+                  <span class="price-row__val">5 700 ₽</span>
+                </li>
+                <li class="price-row">
+                  <div class="price-row__info">
+                    <h4>Шаровые опоры нижние (левая и правая), замена</h4>
+                    <p>Работа + товары</p>
+                  </div>
+                  <span class="price-row__val">7 180 ₽</span>
+                </li>
+                <li class="price-row">
+                  <div class="price-row__info">
+                    <h4>Шаровые опоры (верхние и нижние, левая и правая), замена</h4>
+                    <p>Полный комплект по передней оси · работа + товары</p>
+                  </div>
+                  <span class="price-row__val">10 936 ₽</span>
+                </li>
+              </ul>
+            </div>
+          </details>
+
+          <!-- Category 5: Трансмиссия, КПП, мосты и редукторы -->
+          <details class="price-cat" data-reveal>
+            <summary class="price-cat__summary">
+              <span class="price-cat__index">P.05</span>
+              <span class="price-cat__title">Трансмиссия, КПП, мосты и редукторы</span>
+              <span class="price-cat__count">12 услуг · от 1 650 ₽</span>
+              <span class="price-cat__icon" aria-hidden="true"></span>
+            </summary>
+            <div class="price-cat__body">
+              <ul class="price-list">
+                <li class="price-row">
+                  <div class="price-row__info">
+                    <h4>Замена масел в трансмиссии (работа)</h4>
+                    <p>Замена масла в МКПП, раздаточной коробке, переднем мосту, заднем мосту · работа</p>
+                  </div>
+                  <span class="price-row__val">1 650 ₽</span>
+                </li>
+                <li class="price-row">
+                  <div class="price-row__info">
+                    <h4>Замена масла в АКПП частичная</h4>
+                    <p>Частичная замена с заменой фильтрующего элемента АКПП · работа</p>
+                  </div>
+                  <span class="price-row__val">1 650 ₽</span>
+                </li>
+                <li class="price-row">
+                  <div class="price-row__info">
+                    <h4>Замена ШРУСа (наружного / внутреннего)</h4>
+                    <p>Работа, без запчастей: наружный (2 185 ₽), с частичным разбором передней подвески (2 290 ₽), внутренний (3 105 ₽)</p>
+                  </div>
+                  <span class="price-row__val">2 185 ₽</span>
+                </li>
+                <li class="price-row">
+                  <div class="price-row__info">
+                    <h4>Замена масла в КПП</h4>
+                    <p>Работа</p>
+                  </div>
+                  <span class="price-row__val">2 500 ₽</span>
+                </li>
+                <li class="price-row">
+                  <div class="price-row__info">
+                    <h4>Замена масла в АКПП полная</h4>
+                    <p>Полная аппаратная замена с применением специальной установки и промывкой системы · работа</p>
+                  </div>
+                  <span class="price-row__val">2 750 ₽</span>
+                </li>
+                <li class="price-row">
+                  <div class="price-row__info">
+                    <h4>Замена полуоси в сборе / Замена подшипников полуоси</h4>
+                    <p>Сбор/разбор (в том числе подшипника, сальников, полный комплект) · работа</p>
+                  </div>
+                  <span class="price-row__val">5 290 ₽</span>
+                </li>
+                <li class="price-row">
+                  <div class="price-row__info">
+                    <h4>Замена масел в трансмиссии в 4-х точках (с маслами)</h4>
+                    <p>Передний мост, задний мост, раздаточная коробка, МКПП · работа + запчасти</p>
+                  </div>
+                  <span class="price-row__val">7 410 ₽</span>
+                </li>
+                <li class="price-row">
+                  <div class="price-row__info">
+                    <h4>Замена сцепления (для МКПП)</h4>
+                    <p>Работа без запчастей (8 223 ₽) · комплект сцепления Valeo + подшипник коленвала, работа + запчасти (15 047 ₽) · комплект Exedy, работа + запчасти (17 247 ₽)</p>
+                  </div>
+                  <span class="price-row__val">8 223 ₽</span>
+                </li>
+                <li class="price-row">
+                  <div class="price-row__info">
+                    <h4>Ремонт, дефектовка и переборка редуктора (заднего)</h4>
+                    <p>Разбор с выявлением причины поломки и переборка · работа, без запчастей (8 855 ₽ / 9 625 ₽)</p>
+                  </div>
+                  <span class="price-row__val">8 855 ₽</span>
+                </li>
+                <li class="price-row">
+                  <div class="price-row__info">
+                    <h4>Дефектовка и переборка редуктора (переднего)</h4>
+                    <p>Работа</p>
+                  </div>
+                  <span class="price-row__val">13 750 ₽</span>
+                </li>
+                <li class="price-row">
+                  <div class="price-row__info">
+                    <h4>Редуктор заднего / переднего моста (главная пара), замена и настройка</h4>
+                    <p>Комплект шестерён редуктора заднего моста (16 740 ₽) · переднего моста (21 450 ₽) · работа + запчасти</p>
+                  </div>
+                  <span class="price-row__val">16 740 ₽</span>
+                </li>
+                <li class="price-row">
+                  <div class="price-row__info">
+                    <h4>Дефектовка и переборка МКПП</h4>
+                    <p>Снятие/установка МКПП, сбор/разбор, дефектовка, замена неисправных и изношенных запчастей · работа (17 250 ₽ / 18 975 ₽)</p>
+                  </div>
+                  <span class="price-row__val">17 250 ₽</span>
+                </li>
+              </ul>
+            </div>
+          </details>
+
+          <!-- Category 6: Тормозная система -->
+          <details class="price-cat" data-reveal>
+            <summary class="price-cat__summary">
+              <span class="price-cat__index">P.06</span>
+              <span class="price-cat__title">Тормозная система</span>
+              <span class="price-cat__count">6 услуг · от 990 ₽</span>
+              <span class="price-cat__icon" aria-hidden="true"></span>
+            </summary>
+            <div class="price-cat__body">
+              <ul class="price-list">
+                <li class="price-row">
+                  <div class="price-row__info">
+                    <h4>Замена тормозных колодок (дисковый тормозной механизм)</h4>
+                    <p>Снятие/установка колёс, обработка направляющих и суппортов специальными смазками · работа, без запчастей (990 ₽ / 1 000 ₽ / 1 100 ₽)</p>
+                  </div>
+                  <span class="price-row__val">990 ₽</span>
+                </li>
+                <li class="price-row">
+                  <div class="price-row__info">
+                    <h4>Обслуживание тормозных механизмов (одна ось)</h4>
+                    <p>Чистка и смазка направляющих суппорта · работа + запчасти</p>
+                  </div>
+                  <span class="price-row__val">1 075 ₽</span>
+                </li>
+                <li class="price-row">
+                  <div class="price-row__info">
+                    <h4>Ремонт и обслуживание суппорта</h4>
+                    <p>Разбор/сбор суппорта, установка ремкомплекта суппорта, обработка специальными смазками · работа и специальные смазки (1 210 ₽ / 1 850 ₽)</p>
+                  </div>
+                  <span class="price-row__val">1 210 ₽</span>
+                </li>
+                <li class="price-row">
+                  <div class="price-row__info">
+                    <h4>Замена тормозных дисков (передних / задних)</h4>
+                    <p>Снятие/установка колёс, обязательная замена тормозных колодок, очистители, смазки и медный спрей · работа, без запчастей (2 185 ₽ / 2 375 ₽)</p>
+                  </div>
+                  <span class="price-row__val">2 185 ₽</span>
+                </li>
+                <li class="price-row">
+                  <div class="price-row__info">
+                    <h4>Замена задних тормозных колодок (барабанный тормозной механизм)</h4>
+                    <p>С обработкой направляющих и механизмов специальными смазками · работа и специальные смазки</p>
+                  </div>
+                  <span class="price-row__val">2 190 ₽</span>
+                </li>
+                <li class="price-row">
+                  <div class="price-row__info">
+                    <h4>Диски тормозные задние + колодки, замена</h4>
+                    <p>Комплекс под ключ · работа + запчасти</p>
+                  </div>
+                  <span class="price-row__val">8 960 ₽</span>
+                </li>
+              </ul>
+            </div>
+          </details>
+
+          <!-- Category 7: Чип-тюнинг, электрика, кузовной ремонт и доп. оборудование -->
+          <details class="price-cat" data-reveal>
+            <summary class="price-cat__summary">
+              <span class="price-cat__index">P.07</span>
+              <span class="price-cat__title">Чип-тюнинг, электрика, кузовной ремонт и подготовка</span>
+              <span class="price-cat__count">10 услуг · от 5 500 ₽</span>
+              <span class="price-cat__icon" aria-hidden="true"></span>
+            </summary>
+            <div class="price-cat__body">
+              <ul class="price-list">
+                <li class="price-row">
+                  <div class="price-row__info">
+                    <h4>Крыло переднее (съёмное), ремонт</h4>
+                    <p>Снятие/установка с выставлением зазоров, рихтовка, зачистка ржавчины, сварка · работа + расходные материалы</p>
+                  </div>
+                  <span class="price-row__val">5 500 ₽</span>
+                </li>
+                <li class="price-row">
+                  <div class="price-row__info">
+                    <h4>Чип-тюнинг (репрограмминг ЭБУ)</h4>
+                    <p>Диагностика мотора и репрограмминг · работа (бензиновый ДВС — 6 000 ₽ / 7 000 ₽ / дизель и сложные ЭБУ — 12 000 ₽)</p>
+                  </div>
+                  <span class="price-row__val">6 000 ₽</span>
+                </li>
+                <li class="price-row">
+                  <div class="price-row__info">
+                    <h4>Капот, ремонт</h4>
+                    <p>Снятие/установка с выставлением зазоров, разбор/сбор, ремонт (рихтовка, зачистка ржавчины, сварка) · работа + расходные материалы</p>
+                  </div>
+                  <span class="price-row__val">6 200 ₽</span>
+                </li>
+                <li class="price-row">
+                  <div class="price-row__info">
+                    <h4>Бампер передний, ремонт</h4>
+                    <p>Снятие/установка, разбор/сбор, ремонт (пайка, гибка, стекловолокно) · работа + расходники</p>
+                  </div>
+                  <span class="price-row__val">6 800 ₽</span>
+                </li>
+                <li class="price-row">
+                  <div class="price-row__info">
+                    <h4>Установка автосигнализации</h4>
+                    <p>Полный комплекс подключения сигнализации, включая необходимые арматурные и электротехнические работы · работа + запчасти</p>
+                  </div>
+                  <span class="price-row__val">9 000 ₽</span>
+                </li>
+                <li class="price-row">
+                  <div class="price-row__info">
+                    <h4>Дверь боковая, ремонт</h4>
+                    <p>Снятие/установка с выставлением зазоров, разбор/сбор, ремонт (рихтовка, зачистка ржавчины, сварка) · работа + расходные материалы</p>
+                  </div>
+                  <span class="price-row__val">9 900 ₽</span>
+                </li>
+                <li class="price-row">
+                  <div class="price-row__info">
+                    <h4>Электролифт пятой двери</h4>
+                    <p>Установка комплекта электропривода крышки багажника</p>
+                  </div>
+                  <span class="price-row__val">12 100 ₽</span>
+                </li>
+                <li class="price-row">
+                  <div class="price-row__info">
+                    <h4>Антикоррозийная обработка нового автомобиля</h4>
+                    <p>Работа + расходники</p>
+                  </div>
+                  <span class="price-row__val">15 247 ₽</span>
+                </li>
+                <li class="price-row">
+                  <div class="price-row__info">
+                    <h4>Установка автосигнализации с автозапуском</h4>
+                    <p>Полный комплекс подключения с автозапуском (16 500 ₽) · установка сигнализации с автозапуском StarLine (17 050 ₽) · работа + запчасти</p>
+                  </div>
+                  <span class="price-row__val">16 500 ₽</span>
+                </li>
+                <li class="price-row">
+                  <div class="price-row__info">
+                    <h4>Бодилифт (Body Lift)</h4>
+                    <p>Установка бодилифта кузова 4–5 см · работа + запчасти</p>
+                  </div>
+                  <span class="price-row__val">17 470 ₽</span>
+                </li>
+              </ul>
+            </div>
+          </details>
+        </div>
+
+        <p class="prices__empty" id="pricesEmptyMsg" hidden>По вашему запросу позиция не найдена. Попробуйте другое ключевое слово или откройте полный прайс в 2ГИС.</p>
+
+        <div class="prices__cta" data-reveal>
+          <div>
+            <p class="prices__cta-title">Полный каталог в 2ГИС включает 139 позиций по моделям и модификациям</p>
+            <p class="prices__cta-sub">Перейдите в официальную карточку автомастерской Red Hot Service в 2ГИС или позвоните мастеру для точного расчёта под ваш автомобиль.</p>
+          </div>
+          <div class="prices__cta-actions">
+            <a href="https://2gis.ru/lytkarino/firm/70000001018836416/tab/prices" target="_blank" rel="noopener noreferrer" class="btn btn--primary btn--arrow" data-magnetic="0.24" id="fullPrice2GisBtn">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              Полный прайс в 2ГИС
+            </a>
+            <a href="tel:+79160808082" class="btn btn--ghost" data-magnetic="0.2">Рассчитать по телефону</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- ===== CARS ===== -->
     <section class="section cars" id="cars">
       <div class="container">
@@ -829,6 +1542,47 @@
               <h3>График работы</h3>
               <p>Пн–Сб: 10:00 — 20:00<br>Воскресенье — выходной<br><span class="contacts__hint">Приём автомобиля — 24 часа в сутки</span></p>
             </div>
+            <div class="contacts__block contacts__block--socials">
+              <h3>Социальные сети и площадки</h3>
+              <div class="contacts__socials" aria-label="Официальные страницы Red Hot Service">
+                <a href="https://www.youtube.com/@RedHotService" target="_blank" rel="noopener noreferrer" class="social-card" data-social-link="youtube" aria-label="Официальный YouTube-канал Red Hot Service">
+                  <span class="social-card__icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+                  </span>
+                  <span class="social-card__text">
+                    <strong>YouTube</strong>
+                    <small>Канал RH Service</small>
+                  </span>
+                </a>
+                <a href="https://vk.com/red_hot_service" target="_blank" rel="noopener noreferrer" class="social-card" data-social-link="vk" aria-label="Официальное сообщество Red Hot Service ВКонтакте">
+                  <span class="social-card__icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M13.162 18.994c.609 0 .858-.406.851-.915-.031-1.917.714-2.949 2.059-1.604 1.488 1.488 1.796 2.519 3.603 2.519h3.2c.808 0 1.126-.26 1.126-.668 0-.863-1.421-2.386-2.625-3.504-1.686-1.565-1.765-1.602-.313-3.486 1.801-2.339 4.157-5.336 2.073-5.336h-3.981c-.772 0-.828.435-1.103 1.083-.995 2.347-2.886 5.387-3.604 4.922-.751-.485-.407-2.406-.35-5.261.015-.754.011-1.271-1.141-1.539-.629-.145-1.241-.205-1.809-.205-2.273 0-3.841.953-2.95 1.119 1.571.293 1.42 3.692 1.054 5.16-.638 2.556-3.036-2.024-4.035-4.305-.241-.548-.315-.974-1.175-.974H.772c-.672 0-.787.36-.787.716 0 .602 2.96 6.72 5.786 9.77 2.756 2.975 5.48 2.708 7.391 2.708z"/></svg>
+                  </span>
+                  <span class="social-card__text">
+                    <strong>ВКонтакте</strong>
+                    <small>Сообщество сервиса</small>
+                  </span>
+                </a>
+                <a href="https://wa.me/79160808082" target="_blank" rel="noopener noreferrer" class="social-card" data-social-link="whatsapp" aria-label="Написать в WhatsApp Red Hot Service">
+                  <span class="social-card__icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M12.031 2c-5.508 0-9.987 4.479-9.987 9.988 0 1.763.459 3.479 1.332 4.992L2 22l5.144-1.349a9.946 9.946 0 0 0 4.885 1.281h.004c5.507 0 9.986-4.478 9.986-9.987A9.956 9.956 0 0 0 19.092 4.92 9.953 9.953 0 0 0 12.031 2zm5.822 14.281c-.246.693-1.434 1.326-1.997 1.409-.513.077-1.163.109-1.878-.118-.434-.138-.991-.322-1.703-.629-2.996-1.294-4.953-4.312-5.103-4.512-.149-.2-1.219-1.621-1.219-3.093 0-1.471.771-2.194 1.045-2.493.274-.299.598-.374.797-.374.199 0 .398.002.573.01.184.009.43-.07.673.514.249.598.847 2.069.922 2.218.075.15.125.324.025.524-.1.199-.15.324-.299.498-.149.175-.314.39-.448.524-.15.149-.305.311-.131.61.174.299.774 1.277 1.662 2.069 1.142 1.018 2.104 1.334 2.403 1.483.299.15.473.125.648-.075.174-.199.747-.872.946-1.171.199-.299.398-.249.672-.149.274.1 1.743.822 2.042.972.299.15.498.224.573.349.075.124.075.722-.172 1.415z"/></svg>
+                  </span>
+                  <span class="social-card__text">
+                    <strong>WhatsApp</strong>
+                    <small>Написать компании</small>
+                  </span>
+                </a>
+                <a href="https://2gis.ru/lytkarino/firm/70000001018836416" target="_blank" rel="noopener noreferrer" class="social-card" data-social-link="twogis" aria-label="Официальная карточка Red Hot Service в 2ГИС">
+                  <span class="social-card__icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s7-5.6 7-12a7 7 0 1 0-14 0c0 6.4 7 12 7 12z"/><circle cx="12" cy="10" r="2.6" fill="currentColor" stroke="none"/></svg>
+                  </span>
+                  <span class="social-card__text">
+                    <strong>2ГИС</strong>
+                    <small>Карточка и прайс</small>
+                  </span>
+                </a>
+              </div>
+            </div>
             <div class="contacts__actions">
               <a href="tel:+79160808082" class="btn btn--primary" data-magnetic="0.25">Позвонить сейчас</a>
               <a href="https://yandex.ru/maps/?rtext=~55.566164%2C37.938587&rtt=auto" target="_blank" rel="noopener" class="btn btn--ghost btn--arrow" data-magnetic="0.2">Построить маршрут</a>
@@ -857,6 +1611,20 @@
         <div>
           <p class="footer__name">RED HOT SERVICE</p>
           <p class="footer__tag">Ремонт, обслуживание и подготовка внедорожников и кроссоверов</p>
+          <div class="footer__socials" aria-label="Социальные сети и карты">
+            <a href="https://www.youtube.com/@RedHotService" target="_blank" rel="noopener noreferrer" class="footer__social-link" data-social-link="youtube" aria-label="YouTube — официальный канал RH Service" title="YouTube — официальный канал RH Service">
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+            </a>
+            <a href="https://vk.com/red_hot_service" target="_blank" rel="noopener noreferrer" class="footer__social-link" data-social-link="vk" aria-label="VK — официальное сообщество RH Service" title="VK — официальное сообщество RH Service">
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true"><path d="M13.162 18.994c.609 0 .858-.406.851-.915-.031-1.917.714-2.949 2.059-1.604 1.488 1.488 1.796 2.519 3.603 2.519h3.2c.808 0 1.126-.26 1.126-.668 0-.863-1.421-2.386-2.625-3.504-1.686-1.565-1.765-1.602-.313-3.486 1.801-2.339 4.157-5.336 2.073-5.336h-3.981c-.772 0-.828.435-1.103 1.083-.995 2.347-2.886 5.387-3.604 4.922-.751-.485-.407-2.406-.35-5.261.015-.754.011-1.271-1.141-1.539-.629-.145-1.241-.205-1.809-.205-2.273 0-3.841.953-2.95 1.119 1.571.293 1.42 3.692 1.054 5.16-.638 2.556-3.036-2.024-4.035-4.305-.241-.548-.315-.974-1.175-.974H.772c-.672 0-.787.36-.787.716 0 .602 2.96 6.72 5.786 9.77 2.756 2.975 5.48 2.708 7.391 2.708z"/></svg>
+            </a>
+            <a href="https://wa.me/79160808082" target="_blank" rel="noopener noreferrer" class="footer__social-link" data-social-link="whatsapp" aria-label="WhatsApp — написать компании RH Service" title="WhatsApp — написать компании RH Service">
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true"><path d="M12.031 2c-5.508 0-9.987 4.479-9.987 9.988 0 1.763.459 3.479 1.332 4.992L2 22l5.144-1.349a9.946 9.946 0 0 0 4.885 1.281h.004c5.507 0 9.986-4.478 9.986-9.987A9.956 9.956 0 0 0 19.092 4.92 9.953 9.953 0 0 0 12.031 2zm5.822 14.281c-.246.693-1.434 1.326-1.997 1.409-.513.077-1.163.109-1.878-.118-.434-.138-.991-.322-1.703-.629-2.996-1.294-4.953-4.312-5.103-4.512-.149-.2-1.219-1.621-1.219-3.093 0-1.471.771-2.194 1.045-2.493.274-.299.598-.374.797-.374.199 0 .398.002.573.01.184.009.43-.07.673.514.249.598.847 2.069.922 2.218.075.15.125.324.025.524-.1.199-.15.324-.299.498-.149.175-.314.39-.448.524-.15.149-.305.311-.131.61.174.299.774 1.277 1.662 2.069 1.142 1.018 2.104 1.334 2.403 1.483.299.15.473.125.648-.075.174-.199.747-.872.946-1.171.199-.299.398-.249.672-.149.274.1 1.743.822 2.042.972.299.15.498.224.573.349.075.124.075.722-.172 1.415z"/></svg>
+            </a>
+            <a href="https://2gis.ru/lytkarino/firm/70000001018836416" target="_blank" rel="noopener noreferrer" class="footer__social-link" data-social-link="twogis" aria-label="2ГИС — официальная карточка автомастерской RH Service" title="2ГИС — официальная карточка автомастерской RH Service">
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s7-5.6 7-12a7 7 0 1 0-14 0c0 6.4 7 12 7 12z"/><circle cx="12" cy="10" r="2.6" fill="currentColor" stroke="none"/></svg>
+            </a>
+          </div>
         </div>
       </div>
       <div class="footer__col">

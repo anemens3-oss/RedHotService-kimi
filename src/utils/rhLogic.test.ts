@@ -6,6 +6,8 @@ import {
   wrapGalleryIndex,
   formatCounterValue,
   getWorkshopStatus,
+  RH_SOCIAL_LINKS,
+  filterPriceItemsByQuery,
 } from './rhLogic';
 
 test('calculateCardTilt computes centered and edge tilt angles accurately', () => {
@@ -59,3 +61,26 @@ test('getWorkshopStatus reflects Mon-Sat 10:00-20:00 schedule and 24/7 reception
   assert.equal(nightMon.isRepairOpen, false);
   assert.equal(nightMon.isReceptionOpen, true);
 });
+
+test('RH_SOCIAL_LINKS contains confirmed official URLs for YouTube, VK, WhatsApp, and 2GIS', () => {
+  assert.ok(RH_SOCIAL_LINKS.youtube.startsWith('https://www.youtube.com/'));
+  assert.equal(RH_SOCIAL_LINKS.vk, 'https://vk.com/red_hot_service');
+  assert.equal(RH_SOCIAL_LINKS.whatsapp, 'https://wa.me/79160808082');
+  assert.equal(RH_SOCIAL_LINKS.twogis, 'https://2gis.ru/lytkarino/firm/70000001018836416');
+  assert.equal(
+    RH_SOCIAL_LINKS.twogisPrices,
+    'https://2gis.ru/lytkarino/firm/70000001018836416/tab/prices'
+  );
+});
+
+test('filterPriceItemsByQuery filters 2GIS price items by title, note, or price', () => {
+  const sample = [
+    { title: 'Диагностика подвески', note: 'Полный осмотр агрегатов подвески (работа)', price: '550 ₽' },
+    { title: 'Ремонт ТНВД', note: 'Снять/поставить, настроить на стенде (работа + запчасти)', price: '12 600 ₽' },
+  ];
+  assert.equal(filterPriceItemsByQuery(sample, '').length, 2);
+  assert.equal(filterPriceItemsByQuery(sample, 'подвеск').length, 1);
+  assert.equal(filterPriceItemsByQuery(sample, '12 600').length, 1);
+  assert.equal(filterPriceItemsByQuery(sample, 'несуществующая').length, 0);
+});
+

@@ -32,6 +32,7 @@
 html {
   scroll-behavior: smooth;
   -webkit-text-size-adjust: 100%;
+  overflow-x: hidden;
 }
 
 body {
@@ -2339,6 +2340,391 @@ body.is-loaded .hero__scroll { animation: heroFade 1s var(--ease-out) 1.2s forwa
 }
 
 /* ============================================================
+   Prices — Official 2GIS Price List Accordion
+   ============================================================ */
+.prices {
+  background:
+    radial-gradient(ellipse 60% 35% at 15% 0%, rgba(225, 6, 0, 0.07), transparent 70%),
+    var(--black);
+  border-top: 1px solid var(--line);
+}
+
+.prices__notice {
+  margin-bottom: clamp(32px, 4vw, 48px);
+  padding: clamp(22px, 3vw, 34px);
+  background: var(--graphite);
+  border: 1px solid var(--line-strong);
+  border-left: 3px solid var(--red);
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+.prices__notice-tag {
+  display: inline-block;
+  font-family: var(--font-head);
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--red);
+  margin-bottom: 8px;
+}
+.prices__notice-body p {
+  font-size: 14.5px;
+  line-height: 1.65;
+  color: rgba(245, 245, 245, 0.85);
+}
+.prices__notice-body strong {
+  color: var(--white);
+  font-weight: 700;
+}
+
+.prices__toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  padding-top: 16px;
+  border-top: 1px solid var(--line);
+}
+.prices__search {
+  flex: 1 1 320px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 16px;
+  background: var(--black);
+  border: 1px solid var(--line-strong);
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+.prices__search:focus-within {
+  border-color: var(--red);
+  box-shadow: 0 0 18px rgba(225, 6, 0, 0.2);
+}
+.prices__search svg {
+  color: var(--red);
+  flex-shrink: 0;
+}
+.prices__search input {
+  width: 100%;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: var(--white);
+  font: inherit;
+  font-size: 14px;
+}
+.prices__search input::placeholder {
+  color: var(--muted);
+}
+
+.prices__controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.prices__ctrl-btn {
+  padding: 11px 16px;
+  font-family: var(--font-head);
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+  background: var(--black);
+  border: 1px solid var(--line-strong);
+  clip-path: polygon(6px 0, 100% 0, calc(100% - 6px) 100%, 0 100%);
+  transition: color 0.25s, border-color 0.25s, background 0.25s;
+}
+.prices__ctrl-btn:hover {
+  color: var(--white);
+  border-color: var(--red);
+  background: rgba(225, 6, 0, 0.14);
+}
+
+.prices__categories {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.price-cat {
+  background: var(--graphite);
+  border: 1px solid var(--line);
+  transition: border-color 0.35s, background 0.35s;
+}
+.price-cat[open] {
+  border-color: rgba(225, 6, 0, 0.5);
+  background: #141414;
+}
+
+.price-cat__summary {
+  display: grid;
+  grid-template-columns: auto 1fr auto auto;
+  align-items: center;
+  gap: 18px;
+  padding: 20px 26px;
+  cursor: pointer;
+  list-style: none;
+  user-select: none;
+  transition: background 0.3s;
+}
+.price-cat__summary::-webkit-details-marker {
+  display: none;
+}
+.price-cat__summary:hover {
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.price-cat__index {
+  font-family: var(--font-head);
+  font-size: 12px;
+  letter-spacing: 0.1em;
+  color: var(--white);
+  background: var(--red);
+  padding: 5px 11px;
+  clip-path: polygon(5px 0, 100% 0, calc(100% - 5px) 100%, 0 100%);
+}
+.price-cat__title {
+  font-family: var(--font-head);
+  font-size: clamp(15px, 1.7vw, 19px);
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  color: var(--white);
+  transition: color 0.3s;
+}
+.price-cat__summary:hover .price-cat__title,
+.price-cat[open] .price-cat__title {
+  color: var(--red);
+}
+.price-cat__count {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--muted);
+  padding: 5px 12px;
+  background: rgba(8, 8, 8, 0.65);
+  border: 1px solid var(--line);
+  white-space: nowrap;
+}
+
+.price-cat__icon {
+  position: relative;
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+}
+.price-cat__icon::before,
+.price-cat__icon::after {
+  content: '';
+  position: absolute;
+  background: var(--red);
+  transition: transform 0.35s var(--ease-power);
+}
+.price-cat__icon::before {
+  left: 0;
+  top: 9px;
+  width: 20px;
+  height: 2px;
+}
+.price-cat__icon::after {
+  left: 9px;
+  top: 0;
+  width: 2px;
+  height: 20px;
+}
+.price-cat[open] .price-cat__icon::after {
+  transform: scaleY(0);
+}
+.price-cat[open] .price-cat__icon::before {
+  transform: rotate(180deg);
+}
+
+.price-cat__body {
+  overflow: hidden;
+  border-top: 1px solid var(--line);
+  background: rgba(8, 8, 8, 0.55);
+}
+
+.price-list {
+  display: flex;
+  flex-direction: column;
+}
+.price-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 16px 26px;
+  border-bottom: 1px solid var(--line);
+  transition: background 0.25s, padding-left 0.25s var(--ease-out);
+}
+.price-row:last-child {
+  border-bottom: none;
+}
+.price-row:hover {
+  background: rgba(225, 6, 0, 0.05);
+  padding-left: 32px;
+}
+.price-row__info {
+  min-width: 0;
+  flex: 1;
+}
+.price-row__info h4 {
+  font-family: var(--font-body);
+  font-size: 15.5px;
+  font-weight: 700;
+  color: var(--white);
+  margin-bottom: 3px;
+}
+.price-row__info p {
+  font-size: 13px;
+  color: var(--muted);
+  line-height: 1.5;
+}
+.price-row__val {
+  flex-shrink: 0;
+  font-family: var(--font-head);
+  font-size: clamp(16px, 1.6vw, 19px);
+  color: var(--white);
+  letter-spacing: 0.03em;
+  padding: 6px 14px;
+  background: var(--graphite);
+  border: 1px solid rgba(225, 6, 0, 0.38);
+  clip-path: polygon(6px 0, 100% 0, calc(100% - 6px) 100%, 0 100%);
+  white-space: nowrap;
+  font-variant-numeric: tabular-nums;
+  transition: background 0.25s, border-color 0.25s;
+}
+.price-row:hover .price-row__val {
+  background: var(--red);
+  border-color: var(--red);
+}
+
+.prices__empty {
+  margin-top: 20px;
+  padding: 24px;
+  text-align: center;
+  background: var(--graphite);
+  border: 1px solid var(--line-strong);
+  color: var(--muted);
+  font-size: 15px;
+}
+
+.prices__cta {
+  margin-top: clamp(32px, 4vw, 48px);
+  padding: clamp(24px, 3vw, 38px);
+  background: var(--graphite);
+  border: 1px solid var(--line-strong);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+.prices__cta-title {
+  font-family: var(--font-head);
+  font-size: clamp(16px, 1.8vw, 20px);
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  color: var(--white);
+  margin-bottom: 6px;
+}
+.prices__cta-sub {
+  font-size: 14.5px;
+  color: var(--muted);
+  max-width: 600px;
+}
+.prices__cta-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+/* ============================================================
+   Social Links — Contacts & Footer
+   ============================================================ */
+.contacts__socials {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  margin-top: 4px;
+}
+.social-card {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 14px;
+  background: var(--graphite);
+  border: 1px solid var(--line-strong);
+  clip-path: polygon(8px 0, 100% 0, calc(100% - 8px) 100%, 0 100%);
+  transition: border-color 0.3s var(--ease-out), background 0.3s var(--ease-out),
+              transform 0.3s var(--ease-out), box-shadow 0.3s var(--ease-out);
+}
+.social-card__icon {
+  width: 38px;
+  height: 38px;
+  flex-shrink: 0;
+  display: grid;
+  place-items: center;
+  background: rgba(225, 6, 0, 0.1);
+  border: 1px solid rgba(225, 6, 0, 0.4);
+  color: var(--red);
+  transition: background 0.3s, color 0.3s, transform 0.3s var(--ease-out);
+}
+.social-card__text {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  line-height: 1.25;
+}
+.social-card__text strong {
+  font-family: var(--font-head);
+  font-size: 13.5px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--white);
+}
+.social-card__text small {
+  font-size: 11.5px;
+  color: var(--muted);
+  margin-top: 2px;
+}
+.social-card:hover {
+  border-color: var(--red);
+  background: rgba(225, 6, 0, 0.08);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.45);
+}
+.social-card:hover .social-card__icon {
+  background: var(--red);
+  color: var(--white);
+  transform: scale(1.06);
+}
+
+.footer__socials {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 16px;
+}
+.footer__social-link {
+  width: 36px;
+  height: 36px;
+  display: grid;
+  place-items: center;
+  background: var(--graphite);
+  border: 1px solid var(--line-strong);
+  color: var(--muted);
+  clip-path: polygon(5px 0, 100% 0, calc(100% - 5px) 100%, 0 100%);
+  transition: color 0.3s, background 0.3s, border-color 0.3s, transform 0.3s var(--ease-out);
+}
+.footer__social-link:hover {
+  color: var(--white);
+  background: var(--red);
+  border-color: var(--red);
+  transform: translateY(-3px);
+}
+
+/* ============================================================
    Floating call button (mobile)
    ============================================================ */
 .call-fab {
@@ -2399,7 +2785,26 @@ body.is-loaded .hero__scroll { animation: heroFade 1s var(--ease-out) 1.2s forwa
   .hero__actions .btn { flex: 1 1 100%; }
   .hero__badges { flex-direction: column; gap: 10px; }
   .marquee { transform: rotate(0) scale(1); }
-  .services__cta { flex-direction: column; align-items: flex-start; }
+  .services__cta, .prices__cta { flex-direction: column; align-items: flex-start; }
+  .price-cat__summary {
+    grid-template-columns: auto 1fr auto;
+    padding: 16px 18px;
+    gap: 12px;
+  }
+  .price-cat__count {
+    grid-column: 2 / 3;
+    justify-self: start;
+    font-size: 12px;
+  }
+  .price-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 14px 18px;
+  }
+  .price-row:hover {
+    padding-left: 18px;
+  }
   .lightbox__nav {
     position: absolute;
     bottom: 16px;
@@ -2414,6 +2819,7 @@ body.is-loaded .hero__scroll { animation: heroFade 1s var(--ease-out) 1.2s forwa
   .gallery__grid { grid-template-columns: 1fr; grid-auto-rows: 230px; }
   .gallery__item--wide { grid-column: span 1; }
   .cars__brands { grid-template-columns: 1fr; }
+  .contacts__socials { grid-template-columns: 1fr; }
   .footer__inner { grid-template-columns: 1fr; }
   .about__stats { grid-template-columns: 1fr 1fr; }
   .btn { padding: 15px 22px; font-size: 13px; }
@@ -2437,3 +2843,4 @@ body.is-loaded .hero__scroll { animation: heroFade 1s var(--ease-out) 1.2s forwa
   .hero__speed, .custom-cursor, .blueprint__scanline { display: none !important; }
   [data-curtain]::before { display: none !important; }
 }
+

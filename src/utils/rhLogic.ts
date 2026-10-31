@@ -92,3 +92,32 @@ export function getWorkshopStatus(dayOfWeek: number, hour: number): {
       : 'Приём автомобилей открыт 24/7 · Ремзона Пн–Сб с 10:00',
   };
 }
+
+export const RH_SOCIAL_LINKS = {
+  youtube: 'https://www.youtube.com/@RedHotService',
+  vk: 'https://vk.com/red_hot_service',
+  whatsapp: 'https://wa.me/79160808082',
+  twogis: 'https://2gis.ru/lytkarino/firm/70000001018836416',
+  twogisPrices: 'https://2gis.ru/lytkarino/firm/70000001018836416/tab/prices',
+} as const;
+
+export interface PriceServiceItem {
+  title: string;
+  note: string;
+  price: string;
+}
+
+export function filterPriceItemsByQuery(
+  items: PriceServiceItem[],
+  query: string
+): PriceServiceItem[] {
+  const normalized = query.trim().toLowerCase();
+  if (!normalized) return items;
+  return items.filter(
+    (item) =>
+      item.title.toLowerCase().includes(normalized) ||
+      item.note.toLowerCase().includes(normalized) ||
+      item.price.toLowerCase().includes(normalized)
+  );
+}
+
